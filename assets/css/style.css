@@ -1,0 +1,239 @@
+header .header-top {
+  position: absolute;
+  z-index: 5;
+  color: #fff;
+  width: 100vw;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+header .header-top .head_container .row nav .navbar-list {
+  display: flex;
+  justify-content: space-evenly;
+}
+header .header-top .head_container .row nav .navbar-list li {
+  list-style: none;
+}
+header .header-top .head_container .row nav .navbar-list li .dronediv {
+  position: absolute;
+  top: 60px;
+  background-color: white;
+  visibility: hidden;
+  overflow: hidden;
+  transition: 0.7s all;
+  height: 140px;
+  width: 540px;
+}
+header .header-top .head_container .row nav .navbar-list li .dronediv.active {
+  visibility: visible;
+}
+header .header-top .head_container .row nav .navbar-list li .dronediv .ull {
+  display: flex;
+  padding-left: 15px;
+}
+header .header-top .head_container .row nav .navbar-list li .dronediv .ull .head {
+  padding: 0;
+  list-style: none;
+  margin-right: 57px;
+  margin-top: 18px;
+  font-size: 15px;
+  color: #666;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+header .header-top .head_container .row nav .navbar-list li .dronediv .ull a {
+  text-decoration: none;
+  color: #666;
+}
+header .header-top .head_container .row nav .navbar-list li .dronediv .ull .line {
+  width: 97px;
+  height: 1px;
+  background-color: #cfcccc;
+  margin-top: 8px;
+}
+header .header-top .head_container .row nav .navbar-list li .dronediv .ull .category {
+  margin: 0;
+  padding: 0;
+  margin-top: 11px;
+  display: block;
+}
+header .header-top .head_container .row nav .navbar-list li .dronediv .ull .category li {
+  color: #5d5b5b;
+  list-style: none;
+  font-size: 13px;
+  font-weight: 400;
+  clear: both;
+  padding-bottom: 5px;
+  text-transform: capitalize;
+}
+header .header-top .head_container .row nav .navbar-list li .accesoriesdiv {
+  position: absolute;
+  top: 60px;
+  background-color: white;
+  visibility: hidden;
+  overflow: hidden;
+  transition: 0.7s all;
+  height: 140px;
+  width: 389px;
+}
+header .header-top .head_container .row nav .navbar-list li .accesoriesdiv.active {
+  visibility: visible;
+}
+header .header-top .head_container .row nav .navbar-list li .accesoriesdiv .ull {
+  display: flex;
+  padding-left: 15px;
+}
+header .header-top .head_container .row nav .navbar-list li .accesoriesdiv .ull .head {
+  padding: 0;
+  list-style: none;
+  margin-right: 57px;
+  margin-top: 18px;
+  font-size: 15px;
+  color: #666;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+header .header-top .head_container .row nav .navbar-list li .accesoriesdiv .ull a {
+  text-decoration: none;
+  color: #666;
+}
+header .header-top .head_container .row nav .navbar-list li .accesoriesdiv .ull .line {
+  width: 97px;
+  height: 1px;
+  background-color: #cfcccc;
+  margin-top: 8px;
+}
+header .header-top .head_container .row nav .navbar-list li .accesoriesdiv .ull .category {
+  margin: 0;
+  padding: 0;
+  margin-top: 11px;
+  display: block;
+}
+header .header-top .head_container .row nav .navbar-list li .accesoriesdiv .ull .category li {
+  color: #5d5b5b;
+  list-style: none;
+  font-size: 13px;
+  font-weight: 400;
+  clear: both;
+  padding-bottom: 5px;
+  text-transform: capitalize;
+}
+header .header-top .head_container .row nav .navbar-list li a {
+  text-decoration: none;
+  color: #fff;
+  list-style: none;
+}
+header .header-top .head_container .row nav .navbar-list li a:hover {
+  color: black;
+}
+header .header-top .head_container .row .icons {
+  display: flex;
+  justify-content: flex-end;
+}
+header .header-top .head_container .row .icons svg {
+  margin-left: 20px;
+}
+header .header-top .mobile_container {
+  background-color: white;
+  color: black;
+  height: 60px;
+  margin-bottom: 20px;
+  padding-top: 9px;
+}
+header .header-top .mobile_container .row {
+  align-items: center;
+}
+header .header-top .mobile_container .row .hamburger-search-icons {
+  display: flex;
+  justify-content: center;
+}
+header .header-top .mobile_container .row .hamburger-search-icons svg {
+  margin-left: 10px;
+}
+header .header-top .mobile_container .row .logo {
+  display: flex;
+  justify-content: center;
+}
+header .header-top .mobile_container .row .logo img {
+  width: 158px;
+}
+header .header-top .mobile_container .row .person-basket-icons {
+  display: flex;
+  justify-content: center;
+}
+header .header-top .mobile_container .row .person-basket-icons svg {
+  margin-right: 10px;
+}
+@media screen and (max-width: 391px) {
+  header .header-top .mobile_container .row .person-basket-icons {
+    float: right;
+  }
+  header .header-top .mobile_container .row .hamburger-search-icons {
+    float: left;
+  }
+}
+header .carousel {
+  position: relative;
+}
+header .carousel .carousel-inner .text {
+  position: absolute;
+  top: 138px;
+  left: 74px;
+}
+header .carousel .carousel-inner .text .sub-title {
+  font-size: 34px;
+  text-transform: unset;
+  margin-bottom: 20px;
+  line-height: 34px;
+  letter-spacing: 0.8px;
+}
+header .carousel .carousel-inner .text .main-title {
+  font-size: 74px;
+  text-transform: unset;
+  line-height: 80px;
+  margin-bottom: 27px;
+  letter-spacing: 0.7px;
+  font-weight: 600;
+}
+header .carousel .carousel-inner .text .slider-btn span {
+  width: -moz-max-content;
+  width: max-content;
+  font-size: 14px;
+  border-radius: 30px;
+  background-color: #eb4d4b;
+  color: #fff;
+  font-weight: 400;
+  padding: 10px 25px;
+  transition: all 0.5s;
+}
+header .carousel .carousel-inner .text2 {
+  position: absolute;
+  top: 99px;
+  right: 118px;
+}
+header .carousel .carousel-inner .text2 .sub-title {
+  font-size: 34px;
+  text-transform: unset;
+  margin-bottom: 20px;
+  line-height: 34px;
+  letter-spacing: 0.8px;
+}
+header .carousel .carousel-inner .text2 .main-title {
+  font-size: 74px;
+  text-transform: unset;
+  line-height: 80px;
+  margin-bottom: 27px;
+  letter-spacing: 0.7px;
+  font-weight: 600;
+}
+header .carousel .carousel-inner .text2 .slider-btn span {
+  width: -moz-max-content;
+  width: max-content;
+  font-size: 14px;
+  border-radius: 30px;
+  background-color: #eb4d4b;
+  color: #fff;
+  font-weight: 400;
+  padding: 10px 25px;
+  transition: all 0.5s;
+}/*# sourceMappingURL=style.css.map */
