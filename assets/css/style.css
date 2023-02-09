@@ -145,10 +145,72 @@ header .header-top .mobile_container .row {
 }
 header .header-top .mobile_container .row .hamburger-search-icons {
   display: flex;
-  justify-content: center;
+  margin-left: 34px;
 }
 header .header-top .mobile_container .row .hamburger-search-icons svg {
   margin-left: 10px;
+}
+header .header-top .mobile_container .row .hamburger-search-icons .search-icon {
+  position: relative;
+}
+header .header-top .mobile_container .row .hamburger-search-icons .search-icon .searchDiv {
+  visibility: hidden;
+  overflow: hidden;
+  position: absolute;
+  top: 48px;
+}
+header .header-top .mobile_container .row .hamburger-search-icons .search-icon .searchDiv.active {
+  visibility: visible;
+}
+header .header-top .mobile_container .row .hamburger-search-icons .search-icon .searchDiv .search-input {
+  position: relative;
+}
+header .header-top .mobile_container .row .hamburger-search-icons .search-icon .searchDiv .search-input input {
+  position: relative;
+  width: 255px;
+  height: 40px;
+  border: 1px solid white;
+}
+header .header-top .mobile_container .row .hamburger-search-icons .search-icon .searchDiv .search-input img {
+  position: absolute;
+  left: 225px;
+  top: 11px;
+}
+header .header-top .mobile_container .row .hamburger-search-icons .hamburgerMenuDiv {
+  visibility: hidden;
+  overflow: hidden;
+  position: fixed;
+  left: 0px;
+  top: 10px;
+  height: 100vh;
+  width: 300px;
+  transition: 0.9s;
+  background-color: white;
+}
+header .header-top .mobile_container .row .hamburger-search-icons .hamburgerMenuDiv.active {
+  visibility: visible;
+}
+header .header-top .mobile_container .row .hamburger-search-icons .hamburgerMenuDiv .close {
+  position: relative;
+}
+header .header-top .mobile_container .row .hamburger-search-icons .hamburgerMenuDiv .close svg {
+  position: absolute;
+  right: 5px;
+}
+header .header-top .mobile_container .row .hamburger-search-icons .hamburgerMenuDiv ul {
+  margin-top: 55px;
+  list-style: none;
+  padding-left: 10px;
+  position: relative;
+}
+header .header-top .mobile_container .row .hamburger-search-icons .hamburgerMenuDiv ul li svg {
+  position: absolute;
+  right: 7px;
+}
+@media screen and (max-width: 391px) {
+  header .header-top .mobile_container .row .hamburger-search-icons {
+    margin-left: -11px;
+  }
 }
 header .header-top .mobile_container .row .logo {
   display: flex;
@@ -157,19 +219,86 @@ header .header-top .mobile_container .row .logo {
 header .header-top .mobile_container .row .logo img {
   width: 158px;
 }
+@media screen and (min-width: 391px) and (max-width: 821px) {
+  header .header-top .mobile_container .row .logo img {
+    width: 200px;
+  }
+}
 header .header-top .mobile_container .row .person-basket-icons {
   display: flex;
-  justify-content: center;
+  margin-left: 137px;
 }
 header .header-top .mobile_container .row .person-basket-icons svg {
   margin-right: 10px;
 }
+header .header-top .mobile_container .row .person-basket-icons .personDiv {
+  transition: all 0.5s;
+  visibility: hidden;
+  overflow: hidden;
+  height: 248px;
+  width: 297px;
+  background-color: white;
+  position: absolute;
+  top: 48px;
+  right: 130px;
+  padding: 9px 15px;
+}
+header .header-top .mobile_container .row .person-basket-icons .personDiv.active {
+  visibility: visible;
+}
+header .header-top .mobile_container .row .person-basket-icons .personDiv ul {
+  padding: 1px;
+}
+header .header-top .mobile_container .row .person-basket-icons .personDiv ul li {
+  list-style: none;
+}
+header .header-top .mobile_container .row .person-basket-icons .personDiv ul li a {
+  text-decoration: none;
+  color: #888;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 5px 10px;
+}
+header .header-top .mobile_container .row .person-basket-icons .personDiv .language-selector {
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  padding-top: 10px;
+  margin: 10px 0;
+  font-size: 14px;
+  color: #232323;
+  white-space: nowrap;
+}
+header .header-top .mobile_container .row .person-basket-icons .personDiv .language-selector ul {
+  display: flex;
+  padding-left: 9px;
+}
+header .header-top .mobile_container .row .person-basket-icons .personDiv .language-selector ul li {
+  padding-right: 20px;
+  color: #888;
+  font-size: 12px;
+  font-weight: 500;
+  padding-top: 5px;
+}
+header .header-top .mobile_container .row .person-basket-icons .personDiv .currency-selector {
+  font-size: 14px;
+  color: #232323;
+}
+header .header-top .mobile_container .row .person-basket-icons .personDiv .currency-selector ul {
+  display: flex;
+}
+header .header-top .mobile_container .row .person-basket-icons .personDiv .currency-selector ul li {
+  color: #888;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 5px 10px;
+  text-align: left;
+}
+header .header-top .mobile_container .row .person-basket-icons .personDiv .currency-selector ul li svg {
+  margin: 0;
+}
 @media screen and (max-width: 391px) {
   header .header-top .mobile_container .row .person-basket-icons {
-    float: right;
-  }
-  header .header-top .mobile_container .row .hamburger-search-icons {
-    float: left;
+    margin-left: 43px;
   }
 }
 header .carousel {
