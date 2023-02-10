@@ -3,7 +3,7 @@ header .header-top {
   z-index: 5;
   color: #fff;
   width: 100vw;
-  height: 80px;
+  height: 65px;
   display: flex;
   align-items: center;
 }
@@ -136,9 +136,9 @@ header .header-top .head_container .row .icons svg {
 header .header-top .mobile_container {
   background-color: white;
   color: black;
-  height: 60px;
+  height: 50px;
   margin-bottom: 20px;
-  padding-top: 9px;
+  margin-top: 40px;
 }
 header .header-top .mobile_container .row {
   align-items: center;
@@ -177,18 +177,18 @@ header .header-top .mobile_container .row .hamburger-search-icons .search-icon .
   top: 11px;
 }
 header .header-top .mobile_container .row .hamburger-search-icons .hamburgerMenuDiv {
-  visibility: hidden;
   overflow: hidden;
   position: fixed;
   left: 0px;
   top: 10px;
   height: 100vh;
-  width: 300px;
+  width: 0px;
   transition: 0.9s;
+  z-index: 5555;
   background-color: white;
 }
 header .header-top .mobile_container .row .hamburger-search-icons .hamburgerMenuDiv.active {
-  visibility: visible;
+  width: 300px;
 }
 header .header-top .mobile_container .row .hamburger-search-icons .hamburgerMenuDiv .close {
   position: relative;
@@ -234,6 +234,7 @@ header .header-top .mobile_container .row .person-basket-icons svg {
 header .header-top .mobile_container .row .person-basket-icons .personDiv {
   transition: all 0.5s;
   visibility: hidden;
+  opacity: 0;
   overflow: hidden;
   height: 248px;
   width: 297px;
@@ -245,6 +246,7 @@ header .header-top .mobile_container .row .person-basket-icons .personDiv {
 }
 header .header-top .mobile_container .row .person-basket-icons .personDiv.active {
   visibility: visible;
+  opacity: 1;
 }
 header .header-top .mobile_container .row .person-basket-icons .personDiv ul {
   padding: 1px;
@@ -301,30 +303,53 @@ header .header-top .mobile_container .row .person-basket-icons .personDiv .curre
     margin-left: 43px;
   }
 }
-header .carousel {
+@media screen and (min-width: 391px) and (max-width: 821px) {
+  header .header-top {
+    z-index: 5;
+    color: #fff;
+    width: 100vw;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+}
+@media screen and (max-width: 391px) {
+  header .header-top {
+    z-index: 5;
+    color: #fff;
+    width: 100vw;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+}
+
+.carousel {
   position: relative;
 }
-header .carousel .carousel-inner .text {
+.carousel .carousel-inner .text {
   position: absolute;
-  top: 138px;
-  left: 74px;
+  top: 210px;
+  left: 88px;
 }
-header .carousel .carousel-inner .text .sub-title {
-  font-size: 34px;
+.carousel .carousel-inner .text .sub-title {
+  font-size: 37px;
   text-transform: unset;
   margin-bottom: 20px;
   line-height: 34px;
   letter-spacing: 0.8px;
 }
-header .carousel .carousel-inner .text .main-title {
+.carousel .carousel-inner .text .main-title {
   font-size: 74px;
   text-transform: unset;
   line-height: 80px;
   margin-bottom: 27px;
   letter-spacing: 0.7px;
-  font-weight: 600;
+  font-weight: 700;
 }
-header .carousel .carousel-inner .text .slider-btn span {
+.carousel .carousel-inner .text .slider-btn span {
   width: -moz-max-content;
   width: max-content;
   font-size: 14px;
@@ -335,27 +360,49 @@ header .carousel .carousel-inner .text .slider-btn span {
   padding: 10px 25px;
   transition: all 0.5s;
 }
-header .carousel .carousel-inner .text2 {
-  position: absolute;
-  top: 99px;
-  right: 118px;
+.carousel .carousel-inner .text .desc {
+  width: 474px;
+  font-weight: 500;
 }
-header .carousel .carousel-inner .text2 .sub-title {
+@media screen and (min-width: 391px) and (max-width: 821px) {
+  .carousel .carousel-inner .text {
+    font-size: 14px;
+    position: absolute;
+    top: 37px;
+    left: 60px;
+  }
+  .carousel .carousel-inner .text .sub-title {
+    font-size: 20px;
+  }
+  .carousel .carousel-inner .text .main-title {
+    font-size: 40px;
+    line-height: 19px;
+  }
+  .carousel .carousel-inner .text .desc {
+    width: 290px;
+  }
+}
+.carousel .carousel-inner .text2 {
+  position: absolute;
+  top: 145px;
+  right: 145px;
+}
+.carousel .carousel-inner .text2 .sub-title {
   font-size: 34px;
   text-transform: unset;
   margin-bottom: 20px;
   line-height: 34px;
   letter-spacing: 0.8px;
 }
-header .carousel .carousel-inner .text2 .main-title {
+.carousel .carousel-inner .text2 .main-title {
   font-size: 74px;
   text-transform: unset;
   line-height: 80px;
   margin-bottom: 27px;
   letter-spacing: 0.7px;
-  font-weight: 600;
+  font-weight: 700;
 }
-header .carousel .carousel-inner .text2 .slider-btn span {
+.carousel .carousel-inner .text2 .slider-btn span {
   width: -moz-max-content;
   width: max-content;
   font-size: 14px;
@@ -365,4 +412,73 @@ header .carousel .carousel-inner .text2 .slider-btn span {
   font-weight: 400;
   padding: 10px 25px;
   transition: all 0.5s;
-}/*# sourceMappingURL=style.css.map */
+}
+.carousel .carousel-inner .text2 .desc {
+  width: 486px;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 50px;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+}
+@media screen and (min-width: 391px) and (max-width: 821px) {
+  .carousel .carousel-inner .text2 {
+    font-size: 14px;
+    position: absolute;
+    top: 45px;
+    right: 70px;
+  }
+  .carousel .carousel-inner .text2 .sub-title {
+    font-size: 23px;
+  }
+  .carousel .carousel-inner .text2 .main-title {
+    font-size: 40px;
+    line-height: 19px;
+  }
+  .carousel .carousel-inner .text2 .desc {
+    width: 344px;
+  }
+  .carousel .carousel-inner .text2 .slider-btn span {
+    position: absolute;
+    top: 275px;
+  }
+}
+@media screen and (max-width: 391px) {
+  .carousel .carousel-inner .text2 {
+    font-size: 12px;
+    position: absolute;
+    bottom: 0px;
+    left: 89px;
+  }
+  .carousel .carousel-inner .text2 .sub-title {
+    font-size: 18px;
+    height: 0px;
+    position: absolute;
+    top: 65px;
+    left: 43px;
+    width: 142px;
+  }
+  .carousel .carousel-inner .text2 .main-title {
+    font-size: 20px;
+    height: 0px;
+    margin-top: 65px;
+    margin-left: 17px;
+    display: flex;
+  }
+  .carousel .carousel-inner .text2 .main-title .dronP {
+    margin-left: 8px;
+  }
+  .carousel .carousel-inner .text2 .desc {
+    display: none;
+  }
+  .carousel .carousel-inner .text2 .slider-btn {
+    position: absolute;
+    bottom: 30px;
+    left: 70px;
+  }
+  .carousel .carousel-inner .text2 .slider-btn span {
+    font-size: 11px;
+    font-weight: 400;
+    padding: 4px 9px;
+  }
+}/*# sourceMappingURL=yourstore.css.map */
