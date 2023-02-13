@@ -12,14 +12,17 @@ let searchDiv = document.querySelector(".searchDiv");
 
 drone.addEventListener("mouseover", function () {
   dronediv.classList.add("active");
+  accesoriesdiv.classList.remove("active");
 });
 
 drone.addEventListener("mouseout", function () {
   dronediv.classList.remove("active");
+
 });
 
 accesories.addEventListener("mouseover", function () {
   accesoriesdiv.classList.add("active");
+  dronediv.classList.remove("active");
 });
 
 accesories.addEventListener("mouseout", function () {
