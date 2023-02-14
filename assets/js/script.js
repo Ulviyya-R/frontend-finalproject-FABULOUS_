@@ -41,3 +41,22 @@ personMenu.addEventListener("click", function () {
 searchMenu.addEventListener("click", function () {
   searchDiv.classList.toggle("active");
 });
+
+
+$('#products .owl-carousel').owlCarousel({
+  stagePadding: 50,
+  loop:false,
+  margin:10,
+  nav:true,
+  responsive:{
+      0:{
+          items:1
+      },
+      621:{
+          items:2
+      },
+      1000:{
+          items:2
+      }
+  }
+})

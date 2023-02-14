@@ -450,9 +450,12 @@ body {
         }
       }
       .image {
-        width: 148px;
+        width: 100%;
+        height: 100%;
         margin-left: 25px;
         img {
+          width: 90%;
+          height: 90%;
           padding-bottom: 10px;
         }
       }

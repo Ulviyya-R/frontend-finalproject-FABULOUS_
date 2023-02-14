@@ -424,10 +424,13 @@ body #Product .product-left .product-image-show .right_arrow:hover {
   background-color: #232323;
 }
 body #Product .product-left .image {
-  width: 148px;
+  width: 100%;
+  height: 100%;
   margin-left: 25px;
 }
 body #Product .product-left .image img {
+  width: 90%;
+  height: 90%;
   padding-bottom: 10px;
 }
 body #Product .product-left .accordion-container {
