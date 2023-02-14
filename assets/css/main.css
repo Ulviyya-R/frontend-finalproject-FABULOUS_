@@ -626,23 +626,32 @@ header .header-top .mobile_container .row .person-basket-icons .personDiv .curre
   border: 1px solid black;
 }
 
-#products {
+#customer-review {
   background-image: url("/assets/photos/customersection/testimonialbackground.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding: 48px;
+  padding: 83px;
 }
-#products .title .subtitle {
-  font-size: 26px;
+#customer-review .title .subtitle .subtitle-text {
+  font-size: 16px;
+  letter-spacing: 8px;
+  font-weight: 600;
   margin: 0;
   margin-bottom: 12px;
+  font-family: "Poppins", sans-serif;
   color: #eb4d4b;
 }
-#products .title .home {
-  font-size: 34px;
+#customer-review .title .hometitle .home-text {
+  font-size: 40px;
+  line-height: 40px;
+  letter-spacing: 0;
+  font-weight: 600;
+  color: #232323;
+  font-family: "Poppins", sans-serif;
+  text-transform: unset;
   position: relative;
+  display: inline-block;
+  margin: 0;
 }
-#products .title .home .home_title:before {
+#customer-review .title .hometitle .home-text:before {
   position: absolute;
   content: "";
   width: 80px;
@@ -655,19 +664,48 @@ header .header-top .mobile_container .row .person-basket-icons .personDiv .curre
   margin: 0 auto;
   margin-top: 20px;
 }
-#products .item {
+#customer-review .owl-carousel {
+  margin-left: 20px;
+  width: 94%;
+}
+#customer-review .owl-carousel .owl-stage-outer {
+  width: 96%;
+}
+#customer-review .owl-carousel .owl-nav .disabled {
+  opacity: 1;
+}
+#customer-review .owl-carousel .owl-nav span {
+  display: inline-block;
+  vertical-align: middle;
+  border: 1px solid #eb4d4b;
+  background: #eb4d4b;
+  text-align: center;
+  position: relative;
+  margin: 4px;
+  outline: none;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 50%;
+  color: white;
+}
+#customer-review .owl-carousel .owl-nav span:hover {
+  border-color: #232323;
+  background: #232323;
+}
+#customer-review .customer {
   width: 100%;
   display: flex;
   justify-content: center;
 }
-#products .item .detail {
+#customer-review .customer .about {
   position: relative;
   text-align: left;
   background: #fff;
   padding: 65px 50px 40px;
   margin-top: 60px;
 }
-#products .item .detail .image {
+#customer-review .customer .about .image {
   max-width: 100px;
   border-radius: 50%;
   overflow: hidden;
@@ -679,7 +717,7 @@ header .header-top .mobile_container .row .person-basket-icons .personDiv .curre
   top: -60px;
   left: 50px;
 }
-#products .item .user_description {
+#customer-review .customer .user_description {
   margin-bottom: 15px;
   line-height: 24px;
   font-weight: 400;
@@ -687,7 +725,7 @@ header .header-top .mobile_container .row .person-basket-icons .personDiv .curre
   letter-spacing: 0.5px;
   color: #666;
 }
-#products .item .user_detail .user_name {
+#customer-review .customer .user_about .user_name {
   position: relative;
   display: inline-block;
   font-size: 24px;
@@ -695,7 +733,7 @@ header .header-top .mobile_container .row .person-basket-icons .personDiv .curre
   font-weight: 500;
   color: #232323;
 }
-#products .item .user_detail .user_designation {
+#customer-review .customer .user_about .user_specialty {
   font-size: 14px;
   font-weight: 400;
   padding-left: 6px;
@@ -705,34 +743,40 @@ header .header-top .mobile_container .row .person-basket-icons .personDiv .curre
 }
 
 #faq {
+  padding-top: 30px;
+  padding-bottom: 175px;
   background-color: #f2f6f9;
 }
-#faq .faq_caption {
+#faq .faq-header {
   text-align: center;
   padding: 50px 0 0 0;
-  margin: 50px 0 0 0;
+  margin: 70px 0 0 0;
 }
 @media screen and (max-width: 391px) {
-  #faq .faq_caption {
+  #faq .faq-header {
     margin: 20px 0 0 0;
     padding: 20px 0 0 0;
   }
 }
 @media screen and (max-width: 821px) {
-  #faq .faq_caption {
+  #faq .faq-header {
     font-size: 14px;
     padding: 12px 0 0 0;
     letter-spacing: 3px;
   }
 }
-#faq .faq_caption h5 {
-  font-size: 17px;
+#faq .faq-header h5 {
+  font-size: 16px;
+  letter-spacing: 8px;
+  font-weight: 500;
+  margin: 0;
+  margin-bottom: 12px;
+  font-family: "Poppins", sans-serif;
   color: #eb4d4b;
   text-transform: uppercase;
-  letter-spacing: 7px;
 }
 @media screen and (max-width: 391px) {
-  #faq .faq_caption h5 {
+  #faq .faq-header h5 {
     font-size: 14px;
     letter-spacing: 3px;
     padding: 12px 0 0 0;
@@ -740,45 +784,50 @@ header .header-top .mobile_container .row .person-basket-icons .personDiv .curre
   }
 }
 @media screen and (max-width: 821px) {
-  #faq .faq_caption h5 {
+  #faq .faq-header h5 {
     font-size: 14px;
     padding: 12px 0 0 0;
     letter-spacing: 3px;
   }
 }
-#faq .faq_caption h1 {
+#faq .faq-header h1 {
   font-size: 40px;
-  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 0;
+  font-weight: 600;
+  color: #232323;
+  font-family: "Poppins", sans-serif;
+  text-transform: unset;
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  margin-bottom: 25px;
+  padding-bottom: 25px;
 }
-@media screen and (max-width: 391px) {
-  #faq .faq_caption h1 {
-    font-size: 26px;
-  }
-}
-@media screen and (max-width: 821px) {
-  #faq .faq_caption h1 {
-    font-size: 26px;
-  }
-}
-#faq .line_ {
-  margin: 14px auto 50px;
-  width: 10%;
+#faq .faq-header h1::before {
+  position: absolute;
+  content: "";
+  width: 80px;
   height: 4px;
-  background-color: #eb4d4b;
+  background: #eb4d4b;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin: 0 auto;
 }
 @media screen and (max-width: 391px) {
-  #faq .line_ {
-    width: 20%;
-    margin: 12px auto;
+  #faq .faq-header h1 {
+    font-size: 26px;
   }
 }
 @media screen and (max-width: 821px) {
-  #faq .line_ {
-    margin: 12px auto;
+  #faq .faq-header h1 {
+    font-size: 26px;
   }
 }
 #faq .accordion {
-  padding: 20px 100px;
+  padding: 20px 165px;
 }
 @media screen and (max-width: 391px) {
   #faq .accordion {
@@ -790,51 +839,64 @@ header .header-top .mobile_container .row .person-basket-icons .personDiv .curre
     padding: 20px 10px;
   }
 }
-#faq .accordion .title_info {
-  border-bottom: 1px solid lightgray;
-}
-#faq .accordion .title_info .title_info_faq_title {
+#faq .accordion .header-body .accordion-header {
   width: 100%;
   padding: 14px 0;
   width: 100%;
   height: 50px;
 }
-#faq .accordion .title_info .title_info_faq_title h5 {
-  color: #333;
-  float: left;
+#faq .accordion .header-body .accordion-header h5 {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 20px;
+  margin: 0;
+  letter-spacing: 0.2px;
+  display: inline-block;
+  color: #232323;
 }
 @media screen and (max-width: 391px) {
-  #faq .accordion .title_info .title_info_faq_title h5 {
+  #faq .accordion .header-body .accordion-header h5 {
     font-size: 15px;
   }
 }
-#faq .accordion .title_info .title_info_faq_title i {
+#faq .accordion .header-body .accordion-header i {
   font-size: 14px;
   float: right;
   transform: rotate(0deg);
   transition: 0.1s;
 }
-#faq .accordion .title_info .title_info_faq_title i.active {
+#faq .accordion .header-body .accordion-header i.active {
   transform: rotate(180deg);
 }
-#faq .accordion .title_info .faq_info_ {
+#faq .accordion .header-body .accordion-body {
   color: #787878;
   display: none;
 }
 @media screen and (max-width: 391px) {
-  #faq .accordion .title_info .faq_info_ p {
+  #faq .accordion .header-body .accordion-body p {
     font-size: 13px;
   }
 }
-#faq .accordion .title_info .faq {
-  display: block;
+#faq .accordion .header-body .acc {
+  display: none;
+}
+#faq .accordion .bordr {
+  border-bottom: 1px solid lightgray;
 }
 
-#reclams .item .image img {
+#sponsors {
+  background-color: red;
+  margin-left: 200px;
+}
+#sponsors .sponsor .image img {
   transition: 0.6s all;
 }
-#reclams .item .image:hover img {
+#sponsors .sponsor .image:hover img {
   transform: rotateY(360deg);
+}
+
+body {
+  display: none;
 }
 
 body {

@@ -107,9 +107,9 @@ $(".2responsive").slick({
     {
       breakpoint: 391,
       settings: {
-        item:5,
-        slidesToShow: 5,
-        slidesToScroll: 3,
+        
+        slidesToShow: 2,
+        slidesToScroll: 1,
       },
     },
   ],

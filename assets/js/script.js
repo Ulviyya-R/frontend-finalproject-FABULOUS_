@@ -43,9 +43,11 @@ searchMenu.addEventListener("click", function () {
 });
 
 
-$('#products .owl-carousel').owlCarousel({
+$('#customer-review .owl-carousel').owlCarousel({
   stagePadding: 50,
   loop:false,
+  dots:false,
+ 
   margin:10,
   nav:true,
   responsive:{
@@ -57,6 +59,33 @@ $('#products .owl-carousel').owlCarousel({
       },
       1000:{
           items:2
+      }
+  }
+})
+
+$(".accordion-header").click(function () {
+  let $icon = $(this).find("i");
+  $icon.toggleClass("active");
+  $(this).next().slideToggle();
+  $(".accordion-body").not($(this).next()).slideUp();
+  $(".accordion-header i").not($icon).removeClass("active");
+});
+
+
+$('#sponsors  .owl-carousel').owlCarousel({
+  loop:true,
+  margin:10,
+  autoplay: true,
+  autoplayTimeout: 2500,
+  responsive:{
+      0:{
+          items:1
+      },
+      600:{
+          items:1
+      },
+      1000:{
+          items:1
       }
   }
 })
