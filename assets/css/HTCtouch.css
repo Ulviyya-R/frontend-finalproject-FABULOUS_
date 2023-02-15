@@ -9,9 +9,8 @@ body {
 }
 body header .header-top {
   z-index: 5;
-  color: black;
   width: 100vw;
-  height: 75px;
+  height: 65px;
   display: flex;
   align-items: center;
 }
@@ -128,15 +127,194 @@ body header .header-top .head_container .row nav .navbar-list li .accesoriesdiv 
 }
 body header .header-top .head_container .row nav .navbar-list li a {
   text-decoration: none;
-  color: black;
+  color: #fff;
   list-style: none;
 }
 body header .header-top .head_container .row nav .navbar-list li a:hover {
-  color: b #eb4d4b;
+  color: black;
 }
 body header .header-top .head_container .row .icons {
   display: flex;
   justify-content: flex-end;
+}
+body header .header-top .head_container .row .icons .basket-icon .basketMenuDiv {
+  background-color: white;
+  position: absolute;
+  overflow: hidden;
+  right: 16px;
+  top: -1px;
+  height: 100vh;
+  width: 0px;
+  transition: 0.9s;
+  z-index: 5555555;
+}
+body header .header-top .head_container .row .icons .basket-icon .basketMenuDiv.active {
+  visibility: visible;
+  width: 385px;
+}
+body header .header-top .head_container .row .icons .basket-icon .basketMenuDiv .item {
+  height: 430px;
+  overflow-y: auto;
+}
+body header .header-top .head_container .row .icons .basket-icon .basketMenuDiv .item li {
+  border-bottom: 1px solid gray;
+  border-top: 1px solid gray;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+body header .header-top .head_container .row .icons .basket-icon .basketMenuDiv .item li .image {
+  width: 100px;
+  height: 100px;
+}
+body header .header-top .head_container .row .icons .basket-icon .basketMenuDiv .item li .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+body header .header-top .head_container .row .icons .basket-icon .basketMenuDiv .item li .info {
+  padding-left: 15px;
+  color: black;
+}
+body header .header-top .head_container .row .icons .basket-icon .basketMenuDiv .item li .info h6 {
+  color: black;
+  font-weight: 400;
+}
+body header .header-top .head_container .row .icons .basket-icon .basketMenuDiv .item li .info span {
+  color: black;
+  font-weight: 500;
+}
+body header .header-top .head_container .row .icons .basket-icon .basketMenuDiv .item li .xbtn {
+  margin-left: 110px;
+  color: red;
+}
+body header .header-top .head_container .row .icons .basket-icon .basketMenuDiv .totalprices .total .table {
+  margin: 0px -29px 23px;
+}
+body header .header-top .head_container .row .icons .basket-icon .basketMenuDiv .totalprices .total .table strong {
+  font-weight: 500;
+  color: #232323;
+  font-size: 15px;
+  line-height: 22px;
+}
+body header .header-top .head_container .row .icons .basket-icon .basketMenuDiv .totalprices .total .table .text-right {
+  white-space: normal;
+  color: #232323;
+  font-weight: 700;
+}
+body header .header-top .head_container .row .icons .basket-icon .basketMenuDiv .cart-btn .btn-default {
+  width: 46%;
+  padding: 10px 20px;
+  font-size: 14px;
+  background-color: #eb4d4b;
+  border-color: #eb4d4b;
+  color: #fff;
+  outline: none;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border-radius: 0;
+  transition: all 0.5s;
+}
+body header .header-top .head_container .row .icons .basket-icon .basketMenuDiv .cart-btn .btn-primary {
+  width: 46%;
+  padding: 10px 20px;
+  font-size: 14px;
+  opacity: 1;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border-radius: 0;
+  transition: all 0.5s;
+  color: #fff;
+  background-color: #232323;
+  border: 1px solid #232323;
+  outline: none;
+  line-height: 18px;
+}
+body header .header-top .head_container .row .icons .basket-icon .basketMenuDiv .header-close {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 0 15px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 5px;
+}
+body header .header-top .head_container .row .icons .basket-icon .basketMenuDiv .header-close span {
+  color: #232323;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 400;
+}
+body header .header-top .head_container .row .icons .person-icon .personDiv {
+  transition: all 0.5s;
+  visibility: hidden;
+  opacity: 0;
+  overflow: hidden;
+  height: 248px;
+  width: 297px;
+  background-color: white;
+  position: absolute;
+  top: 48px;
+  right: 130px;
+  padding: 9px 15px;
+}
+body header .header-top .head_container .row .icons .person-icon .personDiv.active {
+  visibility: visible;
+  opacity: 1;
+}
+body header .header-top .head_container .row .icons .person-icon .personDiv ul {
+  padding: 1px;
+}
+body header .header-top .head_container .row .icons .person-icon .personDiv ul li {
+  list-style: none;
+}
+body header .header-top .head_container .row .icons .person-icon .personDiv ul li a {
+  text-decoration: none;
+  color: #888;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 5px 10px;
+}
+body header .header-top .head_container .row .icons .person-icon .personDiv .language-selector {
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  padding-top: 10px;
+  margin: 10px 0;
+  font-size: 14px;
+  color: #232323;
+  white-space: nowrap;
+}
+body header .header-top .head_container .row .icons .person-icon .personDiv .language-selector ul {
+  display: flex;
+  padding-left: 9px;
+}
+body header .header-top .head_container .row .icons .person-icon .personDiv .language-selector ul li {
+  padding-right: 20px;
+  color: #888;
+  font-size: 12px;
+  font-weight: 500;
+  padding-top: 5px;
+}
+body header .header-top .head_container .row .icons .person-icon .personDiv .currency-selector {
+  font-size: 14px;
+  color: #232323;
+}
+body header .header-top .head_container .row .icons .person-icon .personDiv .currency-selector ul {
+  display: flex;
+}
+body header .header-top .head_container .row .icons .person-icon .personDiv .currency-selector ul li {
+  color: #888;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 5px 10px;
+  text-align: left;
+}
+body header .header-top .head_container .row .icons .person-icon .personDiv .currency-selector ul li svg {
+  margin: 0;
 }
 body header .header-top .head_container .row .icons svg {
   margin-left: 20px;
