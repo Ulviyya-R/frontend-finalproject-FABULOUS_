@@ -8,6 +8,10 @@
   <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">
   <link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
   <link rel="stylesheet" href="./assets/css/yourstore.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
     integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -189,7 +193,7 @@
                 <div class="basketMenuDiv">
                   <div class="header-close">
                     <span>CART</span>
-                    <div id="closebasket-button">
+                    <div id="closebasket-button" style="margin-right: 15px;">
                       <svg version="1.1"  xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="   15px" height="15px"
                         viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
@@ -401,6 +405,79 @@
                   <path
                     d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
                 </svg>
+                <div class="basketMenuDiv">
+                  <div class="header-close">
+                    <span>CART</span>
+                    <div id="closebasket-button" style="margin-right: 15px;">
+                      <svg version="1.1"  xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="   15px" height="15px"
+                        viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+                        <image id="image0" width="16" height="16" x="0" y="0" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQEAQAAADlauupAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
+                        AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZ
+                        cwAAAGAAAABgAPBrQs8AAAAHdElNRQfmBQUKKyJdcBQmAAAAk0lEQVQ4y2NgoAZQ2n38uMoke3ti
+                        1Sv/d3BQWnD+PMIARRsbZf8XL5ReODkR0qw4ydZWWePlS+UiR0dUVxBhCE7NxBiipGhjg1czukJk
+                        Q7CJEW0IyZqRQ1pZ4+VLZY2XL5X/OzjgUsdEkqnEAoq8QFEg4lNIMJ0Qk5BwWkBKUsZqiNLpc+fw
+                        RRU6UJlkb4+SmSgBAPl3bzbjMveUAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIyLTA1LTA1VDEwOjQz
+                        OjM0KzAwOjAw2j712QAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMi0wNS0wNVQxMDo0MzozNCswMDow
+                        MKtjTWUAAAAASUVORK5CYII="></image>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cardBasket-detail">
+                    <p class="empty text-left d-none" style="text-align: center; color: black;">Your shopping cart is
+                      empty!
+                    </p>
+                    <ul class="item" style="margin-left:10px; margin-top: 15px; padding: 0;">
+                    </ul>
+                    <ul class="totalprices">
+                      <li class="total">
+                        <table class="table ">
+                          <tbody>
+                            <tr>
+                              <td class="text-left">
+                                <strong > Sub-Total </strong>
+                              </td>
+                              <td class="text-right">$0</td>
+                            </tr>
+                            <tr>
+                              <td class="text-left">
+                                <strong>Eco Tax (-2.00)</strong>
+                              </td>
+                              <td class="text-right">
+                                $0
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="text-left">
+                                <strong>VAT (20%)</strong>
+                              </td>
+                              <td class="text-right">
+                                $0
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="text-left">
+                                <strong">Total</strong>
+                              </td>
+                              <td class="text-right totalprice">
+                                0
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </li>
+                    </ul>
+                    <div class="text-center cart-btn">
+                      <a href="./cart.html">
+                        <button type="button" class="btn btn-default btn-cartblock"> View Cart</button>
+                      </a>
+                      <a href="./cart.html">
+                        <button type="button" class="btn btn-primary btn-cartblock"> Checkout</button>
+                      </a>
+                    </div>
+                  </div>
+
+                </div>
               </div>
             </div>
           </div>
@@ -420,7 +497,7 @@
           <img src="./assets/photos/headerslide/Slider-2-1920x925.png" class="d-none d-md-block w-100" alt="..." />
           <img class="d-lg-none d-md-none w-100" src="./assets/photos/headerslide/slider2-responsive.png" alt="">
           <div class="col-lg-5">
-            <div class="text">
+            <div class="text animasiya animate__animated ">
               <div class="sub-title" style="color: #ffffff">
                 Clear 4k Camera
               </div>
@@ -452,7 +529,7 @@
           <img class="d-lg-none d-md-none w-100 active" src="./assets/photos/headerslide/Slider-1-responsive.png"
             alt="">
           <div class="col-lg-5">
-            <div class="text2">
+            <div class="text2 animasiya animate__animated" >
               <div class="sub-title" style="color: #ffffff">
                 Clear 4k Camera
               </div>

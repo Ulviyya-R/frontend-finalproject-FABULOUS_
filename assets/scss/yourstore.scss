@@ -141,7 +141,7 @@ header {
               position: absolute;
 
               overflow: hidden;
-              right: 16px;
+              right: 0px;
               top: -1px;
               height: 100vh;
               width: 0px;
@@ -240,6 +240,7 @@ header {
                   line-height: 18px;
                 }
               }
+              
               .header-close {
                 display: flex;
                 align-items: center;
@@ -252,6 +253,7 @@ header {
                   text-transform: uppercase;
                   font-size: 14px;
                   font-weight: 400;
+                  margin: 10px 13px -4px;
                 }
               }
             }
@@ -506,6 +508,127 @@ header {
         @media screen and (max-width: 391px) {
           .person-basket-icons {
             margin-left: 43px;
+          }
+        }
+      }
+      .basketMenuDiv {
+        background-color: white;
+        position: absolute;
+
+        overflow: hidden;
+        right: 0px;
+        top: -1px;
+        height: 100vh;
+        width: 0px;
+
+        transition: 0.9s;
+        z-index: 5555555;
+        &.active {
+          visibility: visible;
+          width: 385px;
+        }
+        .item {
+          height: 430px;
+          overflow-y: auto;
+          li {
+            border-bottom: 1px solid gray;
+            border-top: 1px solid gray;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            .image {
+              width: 100px;
+              height: 100px;
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+              }
+            }
+            .info {
+              padding-left: 15px;
+              color: black;
+              h6 {
+                color: black;
+                font-weight: 400;
+              }
+              span {
+                color: black;
+                font-weight: 500;
+              }
+            }
+            .xbtn {
+              margin-left: 110px;
+              color: red;
+            }
+          }
+        }
+        .totalprices {
+          .total {
+            .table {
+              margin: 0px -29px 23px;
+              strong {
+                font-weight: 500;
+                color: #232323;
+                font-size: 15px;
+                line-height: 22px;
+              }
+              .text-right {
+                white-space: normal;
+                color: #232323;
+                font-weight: 700;
+              }
+            }
+          }
+        }
+        .cart-btn {
+          .btn-default {
+            width: 46%;
+            padding: 10px 20px;
+            font-size: 14px;
+            background-color: #eb4d4b;
+            border-color: #eb4d4b;
+            color: #fff;
+            outline: none;
+            font-size: 14px;
+            line-height: 18px;
+            font-weight: 400;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            border-radius: 0;
+            transition: all 0.5s;
+          }
+          .btn-primary {
+            width: 46%;
+            padding: 10px 20px;
+            font-size: 14px;
+            opacity: 1;
+            font-size: 14px;
+            font-weight: 400;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            border-radius: 0;
+            transition: all 0.5s;
+            color: #fff;
+            background-color: #232323;
+            border: 1px solid #232323;
+            outline: none;
+            line-height: 18px;
+          }
+        }
+        
+        .header-close {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 5px 0 15px;
+          border-bottom: 1px solid #eee;
+          margin-bottom: 5px;
+          span {
+            color: #232323;
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: 400;
+            margin: 10px 13px -4px;
           }
         }
       }
