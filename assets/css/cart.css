@@ -542,154 +542,175 @@ header .header-top .mobile_container .row .person-basket-icons .personDiv .curre
   color: black;
 }
 
-#login {
-  padding-bottom: 50px;
-  padding-right: 180px;
+#carts .alert {
+  text-align: center;
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  padding: 12px 14px 12px 14px;
+  border-radius: 0;
 }
-#login .container .row .new-customer {
-  border: 0.8px solid #e9e9e9;
-  border-radius: 5px;
-  width: 100%;
-  height: 240px;
-  padding: 15px;
+#carts .alert button {
+  border: 0;
 }
-#login .container .row .new-customer span {
-  font-size: 16px;
-  display: block;
-  color: #363131;
-  padding-top: 3px;
-  padding-bottom: 10px;
+#carts .alert .close {
+  float: right;
+  font-size: 21px;
   font-weight: 700;
+  line-height: 1;
+  color: #a94442;
+  text-shadow: 0 1px 0 #fff;
+  border-radius: 0;
+  border: none;
 }
-#login .container .row .new-customer strong {
-  color: #232323;
+#carts .alert .close i {
   font-size: 14px;
-  font-weight: 500;
 }
-#login .container .row .new-customer p {
-  margin-top: 18px;
-  color: #333;
-  line-height: 22px;
-  font-size: 13px;
-  margin-bottom: 15px;
-}
-#login .container .row .new-customer .new-customer-continue-btn {
-  transition: 0.8s;
-  padding: 6px 17px;
+#carts .product-table .table {
   text-transform: uppercase;
+}
+#carts .product-table .table .product-table-body .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#carts .product-table .table .product-table-body .buttons .first {
+  color: white;
+  background: black;
+  border: 1px solid black;
+  width: 40px;
+  height: 33px;
+  text-align: center;
+  transition: 0.6s all;
+  cursor: pointer;
+}
+#carts .product-table .table .product-table-body .buttons .first:hover {
+  background: #eb4d4b;
+}
+#carts .product-table .table .product-table-body .buttons .second {
+  color: white;
+  background: #eb4d4b;
+  border: 1px solid black;
+  width: 40px;
+  height: 33px;
+  text-align: center;
+  transition: 0.6s all;
+  cursor: pointer;
+}
+#carts .product-table .table .product-table-body .buttons .second:hover {
+  background: red;
+}
+
+#empty-body.passiv {
+  display: none;
+}
+
+#accordions .accordion .wouldlike .wouldlike-title {
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  border: 1px solid #e0dada;
+  background-color: #f8f8f8;
+}
+#accordions .accordion .wouldlike-info {
+  display: none;
+  border: 1px solid #e5e5e5;
+  padding: 20px;
+}
+#accordions .accordion .wouldlike-info .inputs input {
+  border: 1px solid rgb(214, 210, 210);
+  width: 80%;
+  height: 30px;
+}
+#accordions .accordion .wouldlike-info .inputs input::-moz-placeholder {
+  font-size: 14px;
+}
+#accordions .accordion .wouldlike-info .inputs input::placeholder {
+  font-size: 14px;
+}
+#accordions .accordion .wouldlike-info .inputs button {
+  width: 20%;
+  font-size: 14px;
+  height: 30px;
+  border: none;
   background-color: #232323;
   color: white;
-  border-color: #232323;
-  border-radius: 0;
-  font-family: "Poppins", sans-serif;
+  transition: 0.5s;
 }
-#login .container .row .new-customer .new-customer-continue-btn:hover {
-  background-color: #eb4d4b;
-  border-color: #eb4d4b;
-  font-family: "Poppins", sans-serif;
+#accordions .accordion .wouldlike-info .inputs button:hover {
+  background-color: #eb4d50;
 }
-#login .container .row .login {
-  border: 0.8px solid #e9e9e9;
-  border-radius: 5px;
+#accordions .accordion .wouldlike-info .selectionsone .selection select,
+#accordions .accordion .wouldlike-info .selectionstwo .selection select {
+  border: 1px solid rgb(214, 210, 210);
   width: 100%;
-  height: 305px;
-  padding: 15px;
 }
-#login .container .row .login .title p {
-  font-weight: 700;
-  line-height: 0px;
-  font-size: 16px;
-  color: #333;
-  padding-top: 3px;
-  padding-bottom: 10px;
-}
-#login .container .row .login .login-inputs .email label {
+#accordions .accordion .wouldlike-info .selectionsone .selection select option,
+#accordions .accordion .wouldlike-info .selectionstwo .selection select option {
   font-size: 14px;
-  font-weight: 400;
-  color: #232323;
+  color: rgb(160, 157, 157);
 }
-#login .container .row .login .login-inputs .email input {
-  width: 100%;
-  border-color: #c2c2c2;
-  border-width: 1px;
+#accordions .accordion .wouldlike-info .selectionsthree .inputs input {
+  border: 1px solid rgb(214, 210, 210);
 }
-#login .container .row .login .login-inputs .email input::-moz-placeholder {
-  color: #c2c2c2;
-  font-size: 13px;
-  padding: 6px;
-}
-#login .container .row .login .login-inputs .email input::placeholder {
-  color: #c2c2c2;
-  font-size: 13px;
-  padding: 6px;
-}
-#login .container .row .login .login-inputs .email .form-control {
-  box-shadow: none;
-  border-radius: 0;
-  margin: 0 0 5px;
-  border-color: #e9e9e9;
-  transition: all 0.5s;
+#accordions .accordion .wouldlike-info button {
   font-size: 14px;
-}
-#login .container .row .login .login-inputs .password label {
-  font-size: 14px;
-  padding-bottom: 5px;
-  color: #333;
-}
-#login .container .row .login .login-inputs .password input {
-  width: 100%;
-  border-color: #c2c2c2;
-  border-width: 1px;
-}
-#login .container .row .login .login-inputs .password input::-moz-placeholder {
-  color: #c2c2c2;
-  font-size: 13px;
-  padding: 6px;
-}
-#login .container .row .login .login-inputs .password input::placeholder {
-  color: #c2c2c2;
-  font-size: 13px;
-  padding: 6px;
-}
-#login .container .row .login .login-inputs .password .form-control {
-  box-shadow: none;
-  border-radius: 0;
-  margin: 0 0 5px;
-  border-color: #e9e9e9;
-  transition: all 0.5s;
-  font-size: 14px;
-}
-#login .container .row .login .forgot-pass span {
-  display: block;
-}
-#login .container .row .login .forgot-pass span a {
-  font-size: 14px;
-  transition: 0.8s;
-  text-decoration: none;
-  color: #232323;
-}
-#login .container .row .login .forgot-pass span a:hover {
-  color: #eb4d4b;
-}
-#login .container .row .login .forgot-pass .login_button {
-  margin-top: 15px;
-  transition: 0.8s;
-  padding: 6px 17px;
-  text-transform: uppercase;
+  height: 40px;
+  width: 20%;
+  border: none;
   background-color: #232323;
   color: white;
-  border-color: #232323;
-  border-radius: 0;
-  font-family: "Poppins", sans-serif;
+  transition: 0.5s;
 }
-#login .container .row .login .forgot-pass .login_button:hover {
-  background-color: #eb4d4b;
-  border-color: #eb4d4b;
-  font-family: "Poppins", sans-serif;
+#accordions .accordion .wouldlike-info button:hover {
+  background-color: #eb4d50;
 }
-#login .container .row .login .forgot-pass .login_button:hover:hover {
-  background-color: #eb4d4b;
-  border-color: #eb4d4b;
+#accordions .cart-bottom {
+  width: 100%;
+  height: 30%;
+  background-color: white;
+  display: flex;
+}
+#accordions .cart-bottom ul {
+  width: 50%;
+  line-height: 32px;
+  font-size: 17px;
+  padding: 0px;
+  margin-top: 8px;
+}
+#accordions .cart-bottom ul li {
+  padding: 5;
+  display: flex;
+  justify-content: flex-end;
+  border: 1px solid rgb(221, 220, 220);
+}
+#accordions .buttons {
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+#accordions .buttons button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 30px;
+  font-size: 14px;
+  height: 40px;
+  border: none;
+  background-color: #232323;
+  color: white;
+  transition: 0.5s;
+}
+#accordions .buttons button:hover {
+  background-color: #eb4d50;
+}
+#accordions .buttons .first_btn {
+  background-color: #eb4d50;
+}
+#accordions .buttons .first_btn:hover {
+  background-color: #232323;
 }
 
 footer {
@@ -1163,4 +1184,4 @@ footer .FooterDown .box .text-image p a {
     text-decoration: none;
     color: white;
   }
-}/*# sourceMappingURL=login.css.map */
+}/*# sourceMappingURL=cart.css.map */

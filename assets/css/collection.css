@@ -542,154 +542,599 @@ header .header-top .mobile_container .row .person-basket-icons .personDiv .curre
   color: black;
 }
 
-#login {
-  padding-bottom: 50px;
-  padding-right: 180px;
+@media only screen and (max-width: 391px) {
+  .htc-image-container {
+    height: 105px;
+    background-position: bottom;
+    margin-bottom: -14px;
+  }
 }
-#login .container .row .new-customer {
-  border: 0.8px solid #e9e9e9;
-  border-radius: 5px;
-  width: 100%;
-  height: 240px;
-  padding: 15px;
+#Collection .part-left .category {
+  padding-bottom: 5px;
+  border: 1px solid #dfdfdf;
 }
-#login .container .row .new-customer span {
-  font-size: 16px;
-  display: block;
-  color: #363131;
-  padding-top: 3px;
-  padding-bottom: 10px;
-  font-weight: 700;
+#Collection .part-left .category h5 {
+  color: #222;
+  background-color: #f5f5f5;
+  padding: 10px;
+  text-transform: uppercase;
+  font-weight: 400;
 }
-#login .container .row .new-customer strong {
-  color: #232323;
+#Collection .part-left .category ul li a {
+  display: inline-block;
+  text-decoration: none;
+}
+#Collection .part-left .category-RefineSearch {
+  margin-top: 30px;
+  border: 1px solid #dfdfdf;
+}
+#Collection .part-left .category-RefineSearch h5 {
+  color: #222;
+  background-color: #f5f5f5;
+  padding: 10px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+#Collection .part-left .category-RefineSearch .refineSearch {
+  transition: 0.7s;
+  border: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 15px;
+  padding: 10px 20px;
+  border-radius: 0;
+  background-color: #232323;
+  text-transform: uppercase;
   font-size: 14px;
+  opacity: 1;
+  font-weight: 400;
+}
+#Collection .part-left .category-RefineSearch .refineSearch:hover {
+  background-color: #eb4d4b;
+}
+#Collection .part-left .category-RefineSearch .values {
+  padding-left: 10px;
+}
+#Collection .part-left .category-RefineSearch .values label {
+  color: #888;
+  margin-left: 3px;
+}
+#Collection .part-left .collections_bestsellers {
+  margin-top: 30px;
+}
+#Collection .part-left .collections_lastsellers {
+  margin-top: -20px;
+}
+#Collection .part-left .collections_bestsellers,
+#Collection .part-left .collections_lastsellers {
+  border: 1px solid #dfdfdf;
+}
+#Collection .part-left .collections_bestsellers h5,
+#Collection .part-left .collections_lastsellers h5 {
+  border: medium none;
+  color: #222;
+  font: 400 16px/18px "Poppins", sans-serif;
+  letter-spacing: 1px;
+  width: 100%;
+  display: block;
+  margin: 0;
+  text-align: left;
+  background: #f5f5f5;
+  padding: 15px;
+  text-transform: uppercase !important;
+}
+#Collection .part-left .drone {
+  display: flex;
+}
+#Collection .part-left .drone .image {
+  padding: 10px;
+  display: flex;
+  width: 100px;
+  height: 100px;
+}
+#Collection .part-left .drone .image img {
+  width: 100%;
+  height: 100%;
+}
+#Collection .part-left .drone .about {
+  margin-left: 10px;
+}
+#Collection .part-left .drone .about span {
+  display: block;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+}
+#Collection .part-left .drone .about .drone-price {
+  color: #eb4d4b;
   font-weight: 500;
 }
-#login .container .row .new-customer p {
-  margin-top: 18px;
-  color: #333;
-  line-height: 22px;
-  font-size: 13px;
-  margin-bottom: 15px;
+#Collection .part-left .drone .about .price {
+  display: flex;
 }
-#login .container .row .new-customer .new-customer-continue-btn {
-  transition: 0.8s;
-  padding: 6px 17px;
-  text-transform: uppercase;
-  background-color: #232323;
-  color: white;
-  border-color: #232323;
-  border-radius: 0;
-  font-family: "Poppins", sans-serif;
+#Collection .part-left .drone .about .price .line {
+  margin-left: 3px;
+  color: #888;
+  text-decoration: line-through;
 }
-#login .container .row .new-customer .new-customer-continue-btn:hover {
-  background-color: #eb4d4b;
-  border-color: #eb4d4b;
-  font-family: "Poppins", sans-serif;
+#Collection .part-left .big-discount {
+  margin-top: 30px;
 }
-#login .container .row .login {
-  border: 0.8px solid #e9e9e9;
-  border-radius: 5px;
+#Collection .part-left .big-discount .image {
+  position: relative;
+  width: 266px;
+  height: 400px;
+}
+#Collection .part-left .big-discount .image img {
   width: 100%;
-  height: 305px;
-  padding: 15px;
+  max-width: 100%;
+  position: absolute;
 }
-#login .container .row .login .title p {
-  font-weight: 700;
-  line-height: 0px;
-  font-size: 16px;
+#Collection .part-left .big-discount .image .image-transition {
+  width: 0;
+  height: 0;
+  top: 160px;
+  left: 145px;
+  transition: 0.8s all;
+  position: absolute;
+}
+#Collection .part-left .big-discount .image:hover .image-transition {
+  width: 266px;
+  height: 348px;
+  top: 0;
+  left: 0;
+  transform: rotateZ(180deg);
+  background-color: rgba(156, 150, 150, 0.2470588235);
+}
+#Collection .part-left .showPages {
+  margin-top: 30px;
+  padding: 8px 16px;
+  background-color: #f5f5f5;
+}
+#Collection .part-left .showPages p {
+  padding-top: 14px;
+}
+#Collection .product-compare {
+  background-color: rgba(230, 230, 230, 0.493);
+  margin: 0 10px;
+  margin-top: -47px;
+}
+#Collection .product-compare .grid-list {
+  padding: 20px 0 0 25px;
+  overflow: hidden;
+}
+#Collection .product-compare .grid-list .grid:hover i {
+  transform: rotateY(360deg);
+}
+#Collection .product-compare .grid-list .grid i {
+  overflow: hidden;
   color: #333;
-  padding-top: 3px;
-  padding-bottom: 10px;
+  padding: 2px 6px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  animation-duration: 0.2s;
 }
-#login .container .row .login .login-inputs .email label {
-  font-size: 14px;
-  font-weight: 400;
-  color: #232323;
+@media screen and (max-width: 821px) {
+  #Collection .product-compare .grid-list .grid i {
+    font-size: 18px;
+  }
 }
-#login .container .row .login .login-inputs .email input {
-  width: 100%;
-  border-color: #c2c2c2;
-  border-width: 1px;
+#Collection .product-compare .grid-list p {
+  margin-left: 6px;
 }
-#login .container .row .login .login-inputs .email input::-moz-placeholder {
-  color: #c2c2c2;
-  font-size: 13px;
-  padding: 6px;
-}
-#login .container .row .login .login-inputs .email input::placeholder {
-  color: #c2c2c2;
-  font-size: 13px;
-  padding: 6px;
-}
-#login .container .row .login .login-inputs .email .form-control {
-  box-shadow: none;
-  border-radius: 0;
-  margin: 0 0 5px;
-  border-color: #e9e9e9;
-  transition: all 0.5s;
-  font-size: 14px;
-}
-#login .container .row .login .login-inputs .password label {
-  font-size: 14px;
-  padding-bottom: 5px;
+#Collection .product-compare .grid-list p a {
   color: #333;
-}
-#login .container .row .login .login-inputs .password input {
-  width: 100%;
-  border-color: #c2c2c2;
-  border-width: 1px;
-}
-#login .container .row .login .login-inputs .password input::-moz-placeholder {
-  color: #c2c2c2;
-  font-size: 13px;
-  padding: 6px;
-}
-#login .container .row .login .login-inputs .password input::placeholder {
-  color: #c2c2c2;
-  font-size: 13px;
-  padding: 6px;
-}
-#login .container .row .login .login-inputs .password .form-control {
-  box-shadow: none;
-  border-radius: 0;
-  margin: 0 0 5px;
-  border-color: #e9e9e9;
-  transition: all 0.5s;
-  font-size: 14px;
-}
-#login .container .row .login .forgot-pass span {
-  display: block;
-}
-#login .container .row .login .forgot-pass span a {
-  font-size: 14px;
-  transition: 0.8s;
   text-decoration: none;
-  color: #232323;
+  transition: 0.3s;
 }
-#login .container .row .login .forgot-pass span a:hover {
+#Collection .product-compare .grid-list p a:hover {
   color: #eb4d4b;
 }
-#login .container .row .login .forgot-pass .login_button {
-  margin-top: 15px;
-  transition: 0.8s;
-  padding: 6px 17px;
-  text-transform: uppercase;
-  background-color: #232323;
+#Collection .product-compare .sort-show {
+  align-items: center;
+}
+@media screen and (max-width: 391px) {
+  #Collection .product-compare .sort-show div {
+    margin-bottom: 17px;
+  }
+}
+#Collection .product-compare .sort-show div label {
+  margin: 0 10px 0 18px;
+  font-size: 15px;
+  color: #333;
+}
+@media screen and (max-width: 821px) {
+  #Collection .product-compare .sort-show div label {
+    font-size: 13px;
+  }
+}
+#Collection .product-compare .sort-show div select {
+  border: 1px solid lightgray;
+  color: gray;
+  font-size: 15px;
+  padding: 2px;
+}
+@media screen and (max-width: 821px) {
+  #Collection .product-compare .sort-show div select {
+    font-size: 12px;
+  }
+}
+#Collection .product-compare .sort-show div select:focus {
+  outline: none;
+}
+#Collection .product-compare .sort-show div select option {
+  color: gray;
+}
+#Collection .grid-page .grid-page-drone .drone {
+  margin-bottom: 110px;
+  padding: 11px;
+  height: 400px;
+  position: relative;
+}
+#Collection .grid-page .grid-page-drone .drone .image {
+  height: 100%;
+  position: relative;
+  cursor: pointer;
+}
+#Collection .grid-page .grid-page-drone .drone .image img {
+  width: 100%;
+  max-width: 100 #Collection .grid-page .grid-page-drone .drone .image img;
+}
+#Collection .grid-page .grid-page-drone .drone .image .first {
+  position: absolute;
+  opacity: 1;
+  transition: 8s all;
+}
+#Collection .grid-page .grid-page-drone .drone .image .second {
+  position: absolute;
+  opacity: 0;
+  transition: 1s all;
+}
+#Collection .grid-page .grid-page-drone .drone .image:hover .first {
+  opacity: 0;
+  transform: rotateY(180deg);
+}
+#Collection .grid-page .grid-page-drone .drone .image:hover .second {
+  opacity: 1;
+  transform: rotateY(180deg);
+}
+#Collection .grid-page .grid-page-drone .drone .star-ratings {
+  position: absolute;
+  bottom: 130px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#Collection .grid-page .grid-page-drone .drone .star-ratings .yellow {
+  color: #fec42d;
+  font-size: 12px;
+}
+#Collection .grid-page .grid-page-drone .drone .star-ratings .fa-regular {
+  font-size: 12px;
+}
+#Collection .grid-page .grid-page-drone .drone .hover-buttons-right {
+  position: absolute;
+  left: auto;
+  right: 16px;
+  top: 10px;
+  display: block;
+}
+#Collection .grid-page .grid-page-drone .drone .hover-buttons-right .rightbuttons {
+  border: 1px solid black;
+  padding: 8px;
+  border-radius: 50%;
+  margin-top: 5px;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s all;
+  cursor: pointer;
+}
+#Collection .grid-page .grid-page-drone .drone .hover-buttons-right .rightbuttons:hover {
+  background-color: #eb4d4b;
+}
+#Collection .grid-page .grid-page-drone .drone .rightbuttons.active {
+  opacity: 1;
+}
+#Collection .grid-page .grid-page-drone .drone .product-information {
+  padding: 10px;
+  z-index: 100;
+  position: absolute;
+  bottom: 30px;
+}
+#Collection .grid-page .grid-page-drone .drone .product-information .hover-button-addcart {
   color: white;
-  border-color: #232323;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eb4d4b;
+  position: absolute;
+  left: 135px;
+  transform: translate(-50%);
+  bottom: -62px;
+  transition: 0.5s all;
+  overflow: hidden;
+  height: 35px;
+  width: 120px;
+  cursor: pointer;
+}
+#Collection .grid-page .grid-page-drone .drone .product-information .hover-button-addcart.active {
+  opacity: 1;
+}
+#Collection .grid-page .grid-page-drone .drone .product-information .product-name {
+  margin-bottom: 10px;
+  color: #232323;
+  white-space: nowrap;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.45px;
+  line-height: 20px;
+  cursor: pointer;
+  padding-left: 75px;
+}
+#Collection .grid-page .grid-page-drone .drone .product-information .price {
+  font-weight: 500;
+  color: #eb4d4b;
+  font-size: 16px;
+  margin-bottom: 5px;
+  transition: all 0.4s;
+  opacity: 1;
+  padding-left: 95px;
+}
+#Collection .list-page {
+  display: none;
+}
+#Collection .list-page .drones .drone {
+  position: relative;
+  top: 15px;
+  overflow: hidden;
+  margin: 15px 0;
+}
+#Collection .list-page .drones .drone .drone-hover-icons {
+  position: absolute;
+  z-index: 1;
+  left: 248px;
+  top: 0;
+}
+@media screen and (max-width: 821px) {
+  #Collection .list-page .drones .drone .drone-hover-icons {
+    left: 25px;
+  }
+}
+@media screen and (max-width: 391px) {
+  #Collection .list-page .drones .drone .drone-hover-icons {
+    top: 2px;
+    right: 6px;
+  }
+}
+#Collection .list-page .drones .drone .drone-hover-icons div {
+  cursor: pointer;
+  display: none;
+  width: 36px;
+  height: 36px;
+  margin-top: 10px;
+  background-color: white;
+  text-align: center;
+  border-radius: 50%;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
+  transition: 0.5s;
+}
+@media screen and (max-width: 821px) {
+  #Collection .list-page .drones .drone .drone-hover-icons div {
+    width: 33px;
+    height: 33px;
+  }
+}
+@media screen and (max-width: 391px) {
+  #Collection .list-page .drones .drone .drone-hover-icons div {
+    width: 15px;
+    height: 15px;
+    margin-top: 7px;
+  }
+}
+#Collection .list-page .drones .drone .drone-hover-icons div:hover {
+  background-color: #eb4d4b;
+  color: white;
+}
+#Collection .list-page .drones .drone .drone-hover-icons div i {
+  margin-top: 10px;
+  font-size: 20px;
+}
+@media screen and (max-width: 821px) {
+  #Collection .list-page .drones .drone .drone-hover-icons div i {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 391px) {
+  #Collection .list-page .drones .drone .drone-hover-icons div i {
+    position: relative;
+    top: -8px;
+    font-size: 7px;
+    margin-top: 0;
+  }
+}
+#Collection .list-page .drones .drone .image {
+  overflow: hidden;
+  position: relative;
+  width: 289.98px;
+  height: 289.98px;
+}
+@media screen and (max-width: 821px) {
+  #Collection .list-page .drones .drone .image {
+    width: 230px;
+    height: 230px;
+  }
+}
+@media screen and (max-width: 391px) {
+  #Collection .list-page .drones .drone .image {
+    width: 180px;
+    height: 180px;
+  }
+}
+#Collection .list-page .drones .drone .image .first {
+  -o-object-fit: contain;
+     object-fit: contain;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: 0.7s;
+  cursor: pointer;
+}
+#Collection .list-page .drones .drone .image .second {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.7s;
+}
+#Collection .list-page .drones .drone .image:hover .first {
+  opacity: 0;
+  transform: rotateY(180deg);
+}
+#Collection .list-page .drones .drone .image:hover .second {
+  opacity: 1;
+  transform: rotateY(180deg);
+}
+#Collection .list-page .drones .drone .star-ratings {
+  position: absolute;
+  top: 260px;
+  font-size: 11px;
+  width: 100%;
+  left: 110px;
+}
+@media screen and (max-width: 821px) {
+  #Collection .list-page .drones .drone .star-ratings {
+    top: 300px;
+    font-size: 13px;
+    width: 100%;
+    left: 145px;
+    z-index: 2;
+  }
+}
+@media screen and (max-width: 391px) {
+  #Collection .list-page .drones .drone .star-ratings {
+    top: 155px;
+    width: 100%;
+    left: 77px;
+    z-index: 2;
+  }
+}
+#Collection .list-page .drones .drone .star-ratings i {
+  color: #b6b6b6;
+}
+@media screen and (max-width: 821px) {
+  #Collection .list-page .drones .drone .star-ratings i {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 391px) {
+  #Collection .list-page .drones .drone .star-ratings i {
+    font-size: 6px;
+  }
+}
+#Collection .list-page .drones .drone .star-ratings .yellow {
+  color: #fec42d;
+}
+#Collection .list-page .drones .drone .drone-information {
+  padding: 13px;
+  position: relative;
+}
+#Collection .list-page .drones .drone .drone-information .product-name {
+  cursor: pointer;
+  font-size: 16px;
+  letter-spacing: 0.45px;
+}
+@media screen and (max-width: 821px) {
+  #Collection .list-page .drones .drone .drone-information .product-name {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 821px) {
+  #Collection .list-page .drones .drone .drone-information .product-name {
+    font-size: 8px;
+  }
+}
+#Collection .list-page .drones .drone .drone-information .drone-about {
+  color: gray;
+  font-size: 15px;
+  line-height: 20px;
+  width: 77%;
+}
+#Collection .list-page .drones .drone .drone-information .price {
+  display: flex;
+  cursor: pointer;
+}
+#Collection .list-page .drones .drone .drone-information .price .pricess {
+  font-weight: 600;
+  color: #eb4d4b;
+}
+@media screen and (max-width: 821px) {
+  #Collection .list-page .drones .drone .drone-information .price .pricess {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 391px) {
+  #Collection .list-page .drones .drone .drone-information .price .pricess {
+    font-size: 8px;
+  }
+}
+#Collection .list-page .drones .drone .drone-information .hover-button-addcart {
+  opacity: 1;
+  position: absolute;
+  top: 135px;
+  left: 20px;
+  background-color: #eb4d4b;
+  padding: 10px 21px;
+  color: #fff;
+  border: none;
   border-radius: 0;
-  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  transition: 0.5s all;
+  font-size: 13px;
 }
-#login .container .row .login .forgot-pass .login_button:hover {
-  background-color: #eb4d4b;
-  border-color: #eb4d4b;
-  font-family: "Poppins", sans-serif;
+@media screen and (max-width: 821px) {
+  #Collection .list-page .drones .drone .drone-information .hover-button-addcart {
+    top: 17px;
+    left: 126px;
+    height: 24px;
+    width: 90px;
+  }
 }
-#login .container .row .login .forgot-pass .login_button:hover:hover {
-  background-color: #eb4d4b;
-  border-color: #eb4d4b;
+@media screen and (max-width: 391px) {
+  #Collection .list-page .drones .drone .drone-information .hover-button-addcart {
+    top: 20px;
+    left: 53px;
+    height: 18px;
+    width: 66px;
+  }
+}
+#Collection .list-page .drones .drone .drone-information .hover-button-addcart:hover {
+  background-color: #3b3535;
+}
+@media screen and (max-width: 821px) {
+  #Collection .list-page .drones .drone .drone-information .hover-button-addcart {
+    padding: 6px 17px;
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 821px) {
+  #Collection .list-page .drones .drone .drone-information .hover-button-addcart {
+    padding: 3px 10px;
+    font-size: 8px;
+  }
+}
+
+.collections_accordion .collect_title {
+  padding: 5px;
+  background-color: #dfdbdb;
+  display: flex;
+  justify-content: space-between;
+}
+.collections_accordion .collect_title i.active {
+  transform: rotate(180deg);
+}
+.collections_accordion .collect_info {
+  display: none;
 }
 
 footer {
@@ -1163,4 +1608,4 @@ footer .FooterDown .box .text-image p a {
     text-decoration: none;
     color: white;
   }
-}/*# sourceMappingURL=login.css.map */
+}/*# sourceMappingURL=collection.css.map */

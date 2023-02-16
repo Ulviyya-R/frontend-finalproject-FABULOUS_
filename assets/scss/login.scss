@@ -1,9 +1,10 @@
 header {
   .header-top {
+    // position: absolute;
     z-index: 5;
-    color: black;
+    // color: #fff;
     width: 100vw;
-    height: 75px;
+    height: 65px;
     display: flex;
     align-items: center;
     .head_container {
@@ -120,10 +121,10 @@ header {
               }
               a {
                 text-decoration: none;
-                color: black;
+                color: #fff;
                 list-style: none;
                 &:hover {
-                  color: b#eb4d4b;
+                  color: black;
                 }
               }
             }
@@ -133,6 +134,197 @@ header {
         .icons {
           display: flex;
           justify-content: flex-end;
+          .basket-icon {
+            .basketMenuDiv {
+              background-color: white;
+              position: absolute;
+
+              overflow: hidden;
+              right: 16px;
+              top: -1px;
+              height: 100vh;
+              width: 0px;
+
+              transition: 0.9s;
+              z-index: 5555555;
+              &.active {
+                visibility: visible;
+                width: 385px;
+              }
+              .item {
+                height: 430px;
+                overflow-y: auto;
+                li {
+                  border-bottom: 1px solid gray;
+                  border-top: 1px solid gray;
+                  padding-top: 15px;
+                  padding-bottom: 15px;
+                  .image {
+                    width: 100px;
+                    height: 100px;
+                    img {
+                      width: 100%;
+                      height: 100%;
+                      object-fit: contain;
+                    }
+                  }
+                  .info {
+                    padding-left: 15px;
+                    color: black;
+                    h6 {
+                      color: black;
+                      font-weight: 400;
+                    }
+                    span {
+                      color: black;
+                      font-weight: 500;
+                    }
+                  }
+                  .xbtn {
+                    margin-left: 110px;
+                    color: red;
+                  }
+                }
+              }
+              .totalprices {
+                .total {
+                  .table {
+                    margin: 0px -29px 23px;
+                    strong {
+                      font-weight: 500;
+                      color: #232323;
+                      font-size: 15px;
+                      line-height: 22px;
+                    }
+                    .text-right {
+                      white-space: normal;
+                      color: #232323;
+                      font-weight: 700;
+                    }
+                  }
+                }
+              }
+              .cart-btn {
+                .btn-default {
+                  width: 46%;
+                  padding: 10px 20px;
+                  font-size: 14px;
+                  background-color: #eb4d4b;
+                  border-color: #eb4d4b;
+                  color: #fff;
+                  outline: none;
+                  font-size: 14px;
+                  line-height: 18px;
+                  font-weight: 400;
+                  padding: 10px 20px;
+                  text-transform: uppercase;
+                  border-radius: 0;
+                  transition: all 0.5s;
+                }
+                .btn-primary {
+                  width: 46%;
+                  padding: 10px 20px;
+                  font-size: 14px;
+                  opacity: 1;
+                  font-size: 14px;
+                  font-weight: 400;
+                  padding: 10px 20px;
+                  text-transform: uppercase;
+                  border-radius: 0;
+                  transition: all 0.5s;
+                  color: #fff;
+                  background-color: #232323;
+                  border: 1px solid #232323;
+                  outline: none;
+                  line-height: 18px;
+                }
+              }
+              .header-close {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 5px 0 15px;
+                border-bottom: 1px solid #eee;
+                margin-bottom: 5px;
+                span {
+                  color: #232323;
+                  text-transform: uppercase;
+                  font-size: 14px;
+                  font-weight: 400;
+                }
+              }
+            }
+          }
+          .person-icon {
+            .personDiv {
+              transition: all 0.5s;
+              visibility: hidden;
+              opacity: 0;
+              overflow: hidden;
+              height: 248px;
+              width: 297px;
+              background-color: white;
+              position: absolute;
+              top: 48px;
+              right: 130px;
+              padding: 9px 15px;
+              &.active {
+                visibility: visible;
+                opacity: 1;
+              }
+              ul {
+                padding: 1px;
+                li {
+                  list-style: none;
+
+                  a {
+                    text-decoration: none;
+                    color: #888;
+                    font-size: 12px;
+                    font-weight: 500;
+                    padding: 5px 10px;
+                  }
+                }
+              }
+              .language-selector {
+                border-top: 1px solid #e5e5e5;
+                border-bottom: 1px solid #e5e5e5;
+                padding-top: 10px;
+                margin: 10px 0;
+                font-size: 14px;
+                color: #232323;
+                white-space: nowrap;
+                ul {
+                  display: flex;
+                  padding-left: 9px;
+                  li {
+                    padding-right: 20px;
+                    color: #888;
+                    font-size: 12px;
+                    font-weight: 500;
+                    padding-top: 5px;
+                  }
+                }
+              }
+              .currency-selector {
+                font-size: 14px;
+                color: #232323;
+                ul {
+                  display: flex;
+                  li {
+                    color: #888;
+                    font-size: 12px;
+                    font-weight: 500;
+                    padding: 5px 10px;
+                    text-align: left;
+                    svg {
+                      margin: 0;
+                    }
+                  }
+                }
+              }
+            }
+          }
           svg {
             margin-left: 20px;
           }
@@ -180,6 +372,7 @@ header {
               }
             }
           }
+
           .hamburgerMenuDiv {
             overflow: hidden;
             position: fixed;
@@ -340,6 +533,7 @@ header {
     }
   }
 }
+
 
 .htc-image-container {
   margin-bottom: 30px;
