@@ -6,6 +6,7 @@ header .header-top {
   height: 65px;
   display: flex;
   align-items: center;
+  margin-top: 25px;
 }
 header .header-top .head_container .row nav .navbar-list {
   display: flex;
@@ -129,21 +130,42 @@ header .header-top .head_container .row nav .navbar-list li a:hover {
 header .header-top .head_container .row .icons {
   display: flex;
   justify-content: flex-end;
+  margin-right: 83px;
+}
+header .header-top .head_container .row .icons .basket-icon {
+  position: relative;
+}
+header .header-top .head_container .row .icons .basket-icon sup {
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  background: #eb4d4b;
+  color: #fff;
+  font-size: 11px;
+  line-height: 14px;
+  right: -6px;
+  top: -2px;
+  position: absolute;
+  padding: 0px 2px;
+  margin: 0 auto;
+  text-align: center;
 }
 header .header-top .head_container .row .icons .basket-icon .basketMenuDiv {
   background-color: white;
   position: absolute;
   overflow: hidden;
-  right: 0px;
-  top: -1px;
+  top: -40px;
+  /* left: 264px; */
+  left: -100%;
+  transform: translateX(100%);
   height: 100vh;
   width: 0px;
+  width: 385px;
   transition: 0.9s;
   z-index: 5555555;
 }
 header .header-top .head_container .row .icons .basket-icon .basketMenuDiv.active {
-  visibility: visible;
-  width: 385px;
+  transform: translateX(-25%);
 }
 header .header-top .head_container .row .icons .basket-icon .basketMenuDiv .item {
   height: 430px;
@@ -658,36 +680,75 @@ header .header-top .mobile_container .basketMenuDiv .header-close span {
   font-weight: 500;
 }
 @media screen and (min-width: 391px) and (max-width: 821px) {
-  .carousel .carousel-inner .text {
+  .carousel .carousel-inner .text .text {
     font-size: 14px;
     position: absolute;
     top: 37px;
     left: 60px;
   }
-  .carousel .carousel-inner .text .sub-title {
+  .carousel .carousel-inner .text .text .sub-title {
     font-size: 20px;
   }
-  .carousel .carousel-inner .text .main-title {
+  .carousel .carousel-inner .text .text .main-title {
     font-size: 40px;
     line-height: 19px;
   }
-  .carousel .carousel-inner .text .desc {
+  .carousel .carousel-inner .text .text .desc {
     width: 290px;
   }
 }
-.carousel .carousel-inner .text2 {
+@media screen and (max-width: 391px) {
+  .carousel .carousel-inner .text {
+    font-size: 12px;
+    position: absolute;
+    bottom: 0px;
+    left: 89px;
+  }
+  .carousel .carousel-inner .text .sub-title {
+    font-size: 18px;
+    height: 0px;
+    position: absolute;
+    top: 1px;
+    left: 43px;
+    width: 142px;
+  }
+  .carousel .carousel-inner .text .main-title {
+    font-size: 20px;
+    height: 0px;
+    margin-top: 6px;
+    margin-left: 17px;
+    display: flex;
+  }
+  .carousel .carousel-inner .text .main-title .dronP {
+    margin-left: 8px;
+  }
+  .carousel .carousel-inner .text .desc {
+    display: none;
+  }
+  .carousel .carousel-inner .text .slider-btn {
+    position: absolute;
+    bottom: 30px;
+    left: 70px;
+  }
+  .carousel .carousel-inner .text .slider-btn span {
+    font-size: 11px;
+    font-weight: 400;
+    padding: 4px 9px;
+  }
+}
+.carousel .text2 {
   position: absolute;
   top: 145px;
   right: 145px;
 }
-.carousel .carousel-inner .text2 .sub-title {
+.carousel .text2 .sub-title {
   font-size: 34px;
   text-transform: unset;
   margin-bottom: 20px;
   line-height: 34px;
   letter-spacing: 0.8px;
 }
-.carousel .carousel-inner .text2 .main-title {
+.carousel .text2 .main-title {
   font-size: 74px;
   text-transform: unset;
   line-height: 80px;
@@ -695,7 +756,7 @@ header .header-top .mobile_container .basketMenuDiv .header-close span {
   letter-spacing: 0.7px;
   font-weight: 700;
 }
-.carousel .carousel-inner .text2 .slider-btn span {
+.carousel .text2 .slider-btn span {
   width: -moz-max-content;
   width: max-content;
   font-size: 14px;
@@ -706,7 +767,7 @@ header .header-top .mobile_container .basketMenuDiv .header-close span {
   padding: 10px 25px;
   transition: all 0.5s;
 }
-.carousel .carousel-inner .text2 .desc {
+.carousel .text2 .desc {
   width: 486px;
   font-size: 16px;
   line-height: 24px;
@@ -715,35 +776,35 @@ header .header-top .mobile_container .basketMenuDiv .header-close span {
   font-weight: 400;
 }
 @media screen and (min-width: 391px) and (max-width: 821px) {
-  .carousel .carousel-inner .text2 {
+  .carousel .text2 {
     font-size: 14px;
     position: absolute;
     top: 45px;
     right: 70px;
   }
-  .carousel .carousel-inner .text2 .sub-title {
+  .carousel .text2 .sub-title {
     font-size: 23px;
   }
-  .carousel .carousel-inner .text2 .main-title {
+  .carousel .text2 .main-title {
     font-size: 40px;
     line-height: 19px;
   }
-  .carousel .carousel-inner .text2 .desc {
+  .carousel .text2 .desc {
     width: 344px;
   }
-  .carousel .carousel-inner .text2 .slider-btn span {
+  .carousel .text2 .slider-btn span {
     position: absolute;
     top: 275px;
   }
 }
 @media screen and (max-width: 391px) {
-  .carousel .carousel-inner .text2 {
+  .carousel .text2 {
     font-size: 12px;
     position: absolute;
     bottom: 0px;
     left: 89px;
   }
-  .carousel .carousel-inner .text2 .sub-title {
+  .carousel .text2 .sub-title {
     font-size: 18px;
     height: 0px;
     position: absolute;
@@ -751,25 +812,25 @@ header .header-top .mobile_container .basketMenuDiv .header-close span {
     left: 43px;
     width: 142px;
   }
-  .carousel .carousel-inner .text2 .main-title {
+  .carousel .text2 .main-title {
     font-size: 20px;
     height: 0px;
     margin-top: 65px;
     margin-left: 17px;
     display: flex;
   }
-  .carousel .carousel-inner .text2 .main-title .dronP {
+  .carousel .text2 .main-title .dronP {
     margin-left: 8px;
   }
-  .carousel .carousel-inner .text2 .desc {
+  .carousel .text2 .desc {
     display: none;
   }
-  .carousel .carousel-inner .text2 .slider-btn {
+  .carousel .text2 .slider-btn {
     position: absolute;
     bottom: 30px;
     left: 70px;
   }
-  .carousel .carousel-inner .text2 .slider-btn span {
+  .carousel .text2 .slider-btn span {
     font-size: 11px;
     font-weight: 400;
     padding: 4px 9px;
@@ -782,11 +843,14 @@ header .header-top .mobile_container .basketMenuDiv .header-close span {
   background-color: #fbfbfb;
 }
 #services .service .image {
-  display: flex;
-  justify-content: center;
+  margin-left: 127px;
+  width: 60px;
+  height: 60px;
 }
 #services .service .image img {
   transition: 0.6s;
+  width: 100%;
+  height: 100%;
 }
 #services .service .image:hover img {
   transform: rotateY(360deg);
@@ -797,6 +861,7 @@ header .header-top .mobile_container .basketMenuDiv .header-close span {
 #services .service .head-title h5 {
   font-weight: 500;
   color: black;
+  margin-top: 15px;
 }
 #services .service .head-title p {
   font-weight: 400;
@@ -826,6 +891,11 @@ header .header-top .mobile_container .basketMenuDiv .header-close span {
   }
 }
 
+@media screen and (max-width: 391px) {
+  #services {
+    padding-top: 10px;
+  }
+}
 #story {
   padding-top: 70px;
   padding-bottom: 60px;
@@ -856,18 +926,25 @@ header .header-top .mobile_container .basketMenuDiv .header-close span {
   top: 8px;
   left: 0;
 }
-#story .image img {
+@media screen and (max-width: 391px) {
+  #story ul {
+    display: block;
+  }
+}
+
+.image img {
   width: 100%;
   height: 100%;
 }
-#story .storytitle .subtitle {
+
+.storytitle .subtitle {
   font-size: 16px;
   letter-spacing: 8px;
   font-weight: 500;
   margin-bottom: 12px;
   color: #eb4d4b;
 }
-#story .storytitle .hometitle .home-title {
+.storytitle .hometitle .home-title {
   font-size: 40px;
   line-height: 40px;
   letter-spacing: 0;
@@ -878,7 +955,7 @@ header .header-top .mobile_container .basketMenuDiv .header-close span {
   margin-bottom: 25px;
   padding-bottom: 25px;
 }
-#story .storytitle .hometitle .home-title::before {
+.storytitle .hometitle .home-title::before {
   position: absolute;
   content: "";
   width: 80px;
@@ -886,13 +963,20 @@ header .header-top .mobile_container .basketMenuDiv .header-close span {
   background: #eb4d4b;
   bottom: 0;
 }
-#story .storytitle .story-list {
+@media screen and (max-width: 391px) {
+  .storytitle .hometitle .home-title {
+    font-size: 24px;
+    line-height: 10px;
+    margin-left: 78px;
+  }
+}
+.storytitle .story-list {
   margin-left: -30px;
 }
-#story .storytitle .text {
+.storytitle .text {
   width: 68%;
 }
-#story .storytitle .text p {
+.storytitle .text p {
   margin-bottom: 25px;
   font-size: 14px;
   font-weight: 400;
@@ -900,10 +984,20 @@ header .header-top .mobile_container .basketMenuDiv .header-close span {
   letter-spacing: 0.5px;
   line-height: 24px;
 }
-#story .storytitle ::marker {
+@media screen and (max-width: 391px) {
+  .storytitle .text {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 391px) {
+  .storytitle .text {
+    width: 90%;
+  }
+}
+.storytitle ::marker {
   color: red;
 }
-#story .storytitle .view-more-btn {
+.storytitle .view-more-btn {
   padding: 8px 25px;
   background: #eb4d4b;
   color: #fff;
@@ -913,12 +1007,29 @@ header .header-top .mobile_container .basketMenuDiv .header-close span {
   border-radius: 30px;
   margin-top: 20px;
   margin-left: 32px;
+  text-transform: uppercase;
 }
-#story .storytitle .view-more-btn:hover {
+.storytitle .view-more-btn:hover {
   background-color: black;
   border: 1px solid black;
 }
+@media screen and (max-width: 391px) {
+  .storytitle .view-more-btn {
+    margin-left: 0;
+  }
+}
 
+@media screen and (max-width: 391px) {
+  #story {
+    padding-top: 10PX;
+  }
+  #story .storytitle .subtitle {
+    font-size: 13px;
+    margin-bottom: 8px;
+    letter-spacing: 3px;
+    text-align: center;
+  }
+}
 #customer-review {
   background-image: url("/assets/photos/customersection/testimonialbackground.png");
   padding: 83px;
@@ -1041,7 +1152,6 @@ header .header-top .mobile_container .basketMenuDiv .header-close span {
 #All-Products .title .subtitle .subtitle-text {
   font-size: 16px;
   letter-spacing: 8px;
-  font-weight: 600;
   margin: 0;
   margin-bottom: 12px;
   font-family: "Poppins", sans-serif;
@@ -1071,6 +1181,9 @@ header .header-top .mobile_container .basketMenuDiv .header-close span {
   text-align: center;
   margin: 0 auto;
   margin-top: 20px;
+}
+#All-Products .owl-carousel {
+  width: 88% I !important;
 }
 #All-Products .owl-carousel .owl-nav .disabled {
   opacity: 1;
@@ -1130,19 +1243,17 @@ header .header-top .mobile_container .basketMenuDiv .header-close span {
   color: #232323;
 }
 #All-Products .drone {
-  margin-bottom: 110px;
-  padding: 11px;
+  margin-bottom: 60px;
   height: 400px;
   position: relative;
 }
 #All-Products .drone .image {
-  height: 100%;
+  height: 93%;
   position: relative;
   cursor: pointer;
 }
 #All-Products .drone .image img {
   width: 100%;
-  height: 100%;
 }
 #All-Products .drone .image .first {
   position: absolute;
@@ -1164,9 +1275,17 @@ header .header-top .mobile_container .basketMenuDiv .header-close span {
 }
 #All-Products .drone .star-ratings {
   position: absolute;
-  bottom: 40px;
+  bottom: 70px;
   left: 50%;
   transform: translateX(-50%);
+  word-spacing: -2px;
+}
+#All-Products .drone .star-ratings .yellow {
+  color: #fec42d;
+  font-size: 12px;
+}
+#All-Products .drone .star-ratings .fa-regular {
+  font-size: 12px;
 }
 #All-Products .drone .hover-buttons-right {
   position: absolute;
@@ -1205,9 +1324,10 @@ header .header-top .mobile_container .basketMenuDiv .header-close span {
   position: absolute;
   left: 50%;
   transform: translate(-50%);
-  bottom: -62px;
+  bottom: -38px;
   transition: 0.5s all;
   overflow: hidden;
+  opacity: 0;
   height: 35px;
   width: 120px;
   cursor: pointer;
@@ -1216,7 +1336,6 @@ header .header-top .mobile_container .basketMenuDiv .header-close span {
   opacity: 1;
 }
 #All-Products .product-information .product-name {
-  margin-bottom: 10px;
   color: #232323;
   white-space: nowrap;
   font-size: 16px;

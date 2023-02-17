@@ -80,14 +80,16 @@ $("#All-Products .owl-carousel").owlCarousel({
   stagePadding: 20,
   loop: false,
   dots: false,
-  margin: 10,
+  margin: 20,
   nav: true,
   responsive: {
     0: {
       items: 1,
     },
-    621: {
+    391: {
       items: 2,
+      // stagePadding: 0,
+      
     },
     1000: {
       items: 3,
@@ -117,4 +119,15 @@ $(".bestSellers-button").click(function () {
 $(".newArrivals-button").click(function () {
   filterGroup("newArrivals-carusel ");
 });
+
+
+$(".drone").on("mouseover", function () {
+  $(this).find(".hover-button-addcart").addClass("active");
+  $(this).find(".rightbuttons").addClass("active");
+});
+$(".drone").on("mouseout", function () {
+  $(this).find(".hover-button-addcart").removeClass("active");
+  $(this).find(".rightbuttons").removeClass("active");
+});
+
 //#endregion

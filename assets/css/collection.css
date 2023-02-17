@@ -766,19 +766,17 @@ header .header-top .mobile_container .row .person-basket-icons .personDiv .curre
   color: gray;
 }
 #Collection .grid-page .grid-page-drone .drone {
-  margin-bottom: 110px;
   padding: 11px;
-  height: 400px;
   position: relative;
 }
 #Collection .grid-page .grid-page-drone .drone .image {
-  height: 100%;
+  height: 270px;
   position: relative;
   cursor: pointer;
 }
 #Collection .grid-page .grid-page-drone .drone .image img {
   width: 100%;
-  max-width: 100 #Collection .grid-page .grid-page-drone .drone .image img;
+  height: 100%;
 }
 #Collection .grid-page .grid-page-drone .drone .image .first {
   position: absolute;
@@ -800,7 +798,7 @@ header .header-top .mobile_container .row .person-basket-icons .personDiv .curre
 }
 #Collection .grid-page .grid-page-drone .drone .star-ratings {
   position: absolute;
-  bottom: 130px;
+  bottom: 103px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -811,11 +809,21 @@ header .header-top .mobile_container .row .person-basket-icons .personDiv .curre
 #Collection .grid-page .grid-page-drone .drone .star-ratings .fa-regular {
   font-size: 12px;
 }
+@media screen and (max-width: 391px) {
+  #Collection .grid-page .grid-page-drone .drone {
+    bottom: 12px;
+  }
+}
+@media screen and (max-width: 821px) {
+  #Collection .grid-page .grid-page-drone .drone {
+    bottom: 12px;
+  }
+}
 #Collection .grid-page .grid-page-drone .drone .hover-buttons-right {
   position: absolute;
   left: auto;
-  right: 16px;
-  top: 10px;
+  right: 13px;
+  top: 0px;
   display: block;
 }
 #Collection .grid-page .grid-page-drone .drone .hover-buttons-right .rightbuttons {
@@ -838,9 +846,6 @@ header .header-top .mobile_container .row .person-basket-icons .personDiv .curre
 }
 #Collection .grid-page .grid-page-drone .drone .product-information {
   padding: 10px;
-  z-index: 100;
-  position: absolute;
-  bottom: 30px;
 }
 #Collection .grid-page .grid-page-drone .drone .product-information .hover-button-addcart {
   color: white;
@@ -849,11 +854,12 @@ header .header-top .mobile_container .row .person-basket-icons .personDiv .curre
   align-items: center;
   background-color: #eb4d4b;
   position: absolute;
-  left: 135px;
+  left: 50%;
   transform: translate(-50%);
-  bottom: -62px;
+  bottom: 20px;
   transition: 0.5s all;
   overflow: hidden;
+  opacity: 0;
   height: 35px;
   width: 120px;
   cursor: pointer;
@@ -880,6 +886,16 @@ header .header-top .mobile_container .row .person-basket-icons .personDiv .curre
   transition: all 0.4s;
   opacity: 1;
   padding-left: 95px;
+}
+@media screen and (max-width: 821px) {
+  #Collection .grid-page .grid-page-drone .drone .product-information {
+    margin-left: 195px;
+  }
+}
+@media screen and (max-width: 391px) {
+  #Collection .grid-page .grid-page-drone .drone .product-information {
+    margin-left: 9px;
+  }
 }
 #Collection .list-page {
   display: none;
@@ -998,16 +1014,16 @@ header .header-top .mobile_container .row .person-basket-icons .personDiv .curre
 #Collection .list-page .drones .drone .star-ratings {
   position: absolute;
   top: 260px;
-  font-size: 11px;
+  font-size: 13px;
   width: 100%;
   left: 110px;
 }
 @media screen and (max-width: 821px) {
   #Collection .list-page .drones .drone .star-ratings {
-    top: 300px;
+    top: 195px;
     font-size: 13px;
     width: 100%;
-    left: 145px;
+    left: 77px;
     z-index: 2;
   }
 }
@@ -1015,7 +1031,7 @@ header .header-top .mobile_container .row .person-basket-icons .personDiv .curre
   #Collection .list-page .drones .drone .star-ratings {
     top: 155px;
     width: 100%;
-    left: 77px;
+    left: 56px;
     z-index: 2;
   }
 }
@@ -1024,12 +1040,12 @@ header .header-top .mobile_container .row .person-basket-icons .personDiv .curre
 }
 @media screen and (max-width: 821px) {
   #Collection .list-page .drones .drone .star-ratings i {
-    font-size: 10px;
+    font-size: 16px;
   }
 }
 @media screen and (max-width: 391px) {
   #Collection .list-page .drones .drone .star-ratings i {
-    font-size: 6px;
+    font-size: 10px;
   }
 }
 #Collection .list-page .drones .drone .star-ratings .yellow {
@@ -1051,7 +1067,7 @@ header .header-top .mobile_container .row .person-basket-icons .personDiv .curre
 }
 @media screen and (max-width: 821px) {
   #Collection .list-page .drones .drone .drone-information .product-name {
-    font-size: 8px;
+    font-size: 13px;
   }
 }
 #Collection .list-page .drones .drone .drone-information .drone-about {
@@ -1070,12 +1086,12 @@ header .header-top .mobile_container .row .person-basket-icons .personDiv .curre
 }
 @media screen and (max-width: 821px) {
   #Collection .list-page .drones .drone .drone-information .price .pricess {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 @media screen and (max-width: 391px) {
   #Collection .list-page .drones .drone .drone-information .price .pricess {
-    font-size: 8px;
+    font-size: 14px;
   }
 }
 #Collection .list-page .drones .drone .drone-information .hover-button-addcart {
@@ -1094,18 +1110,16 @@ header .header-top .mobile_container .row .person-basket-icons .personDiv .curre
 }
 @media screen and (max-width: 821px) {
   #Collection .list-page .drones .drone .drone-information .hover-button-addcart {
-    top: 17px;
-    left: 126px;
-    height: 24px;
-    width: 90px;
+    position: static;
+    height: 20px;
+    width: 78px;
   }
 }
 @media screen and (max-width: 391px) {
   #Collection .list-page .drones .drone .drone-information .hover-button-addcart {
-    top: 20px;
-    left: 53px;
-    height: 18px;
-    width: 66px;
+    position: static;
+    height: 78px;
+    width: 20px;
   }
 }
 #Collection .list-page .drones .drone .drone-information .hover-button-addcart:hover {

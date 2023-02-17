@@ -1,7 +1,7 @@
 
-let basketIconbut = document.getElementById("basketIcon");
-let basketHTML = document.querySelector(".basketMenuDiv");
-let itemul = document.querySelector(".item");
+let basketIconbut = document.querySelectorAll(".basket-icon");
+let basketHTML = document.querySelectorAll(".basketMenuDiv");
+let itemul = document.querySelectorAll(".item");
 
 document.addEventListener("DOMContentLoaded", function () {
   let basketStr = localStorage.getItem("basket");
@@ -14,58 +14,66 @@ document.addEventListener("DOMContentLoaded", function () {
 
   }
 });
-basketIconbut.addEventListener("click", function () {
-  // // basketHTML.classList.add("active");
-
-  document.body.style.overflow = "hidden";
-
-  let basket = JSON.parse(localStorage.getItem("basket"));
-
-  itemul.innerHTML = " ";
-
-  basket.forEach((item) => {
-    let html = `
-    <li class ="d-flex mb-3">
-   <div class="image">
-     <img src="${item.src}" alt="">
-   </div>
-   <div class="info">
-   <span>${item.count}</span>
-   x
-    <h6>
-    ${item.name}
-    </h6>
-    <span>
-    ${item.price}
-    </span>
-    
-    </div>
-    <div class="xbtn">
-    <b style ="color:black">
-    <i class="fa-regular fa-trash-can"></i>
-    </b>
-    </div>
-    
-    </li>
-    `;
-    itemul.innerHTML += html;
-  });
-
-  let delbutton = document.querySelectorAll(".xbtn");
-  delbutton.forEach((del) => {
-    del.addEventListener("click", function () {
-      let li = this.parentElement;
-      let name = li.querySelector(".info  h6").innerText;
-      basket = basket.filter((drone) => drone.name != name);
-      li.remove();
-
-      ShowCount(basket);
-    ShowTotalPrice(basket);
-
-      localStorage.setItem("basket", JSON.stringify(basket));
+basketIconbut.forEach(icon=>{
+  icon.addEventListener("click", function () {
+    // // basketHTML.classList.add("active");
+  
+  
+    document.body.style.overflow = "hidden";
+  
+    let basket = JSON.parse(localStorage.getItem("basket"));
+  
+    itemul.forEach(ul=>{
+      ul.innerHTML = " ";
+    })
+  
+    basket.forEach((item) => {
+      let html = `
+      <li class ="d-flex mb-3" id="${item.id}">
+     <div class="image">
+       <img src="${item.src}" alt="">
+     </div>
+     <div class="info">
+     <span>${item.count}</span>
+     x
+      <h6>
+      ${item.name}
+      </h6>
+      <span>
+      ${item.price}
+      </span>
+      
+      </div>
+      <div class="xbtn">
+      <b style ="color:black">
+      <i class="fa-regular fa-trash-can"></i>
+      </b>
+      </div>
+      
+      </li>
+      `;
+      itemul.forEach(ul=>{
+        ul.innerHTML +=html;
+      })
+    });
+  
+    let delbutton = document.querySelectorAll(".xbtn");
+    delbutton.forEach((del) => {
+      del.addEventListener("click", function () {
+        let li = this.parentElement;
+        let id = li.getAttribute("id");
+        basket = basket.filter((drone) => drone.id != id);
+        li.remove();
+  
+        ShowCount(basket);
+      ShowTotalPrice(basket);
+  
+        localStorage.setItem("basket", JSON.stringify(basket));
+      });
     });
   });
-});
+})
+
 
 let addtocartButton = document.querySelectorAll(".hover-button-addcart");
 addtocartButton.forEach((button) => {
