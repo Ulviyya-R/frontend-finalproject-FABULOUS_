@@ -2,14 +2,22 @@ header {
   .header-top {
     // position: absolute;
     z-index: 5;
-    // color: #fff;
+    color: black;
     width: 100vw;
     height: 65px;
     display: flex;
     align-items: center;
+    margin-top: 25px;
+    &.active{
+      position: fixed;
+      top: -25px;
+      color: black;
+      background-color: whitesmoke;   
+    }
     .head_container {
       .row {
         nav {
+          
           .navbar-list {
             display: flex;
             justify-content: space-evenly;
@@ -95,6 +103,7 @@ header {
                   a {
                     text-decoration: none;
                     color: #666;
+                    
                   }
                   .line {
                     width: 97px;
@@ -121,11 +130,14 @@ header {
               }
               a {
                 text-decoration: none;
-                color: #fff;
+                color: black;
                 list-style: none;
+                
+                
                 &:hover {
-                  color: black;
+                  color: #eb4d4b;
                 }
+                
               }
             }
           }
@@ -134,22 +146,77 @@ header {
         .icons {
           display: flex;
           justify-content: flex-end;
+          margin-right: 83px;
+          .search-icon{
+            .searchDiv {
+              visibility: hidden;
+              overflow: hidden;
+              position: absolute;
+              right: 260px;
+              // transition: 2s all;
+              opacity: 0;
+              &.active {
+                visibility: visible;
+                transition: 1s all;
+                opacity: 1;
+              }
+              .search-input {
+                position: relative;
+                input {
+                  position: relative;
+                  width: 317px;
+                  height: 40px;
+                  border: 1px solid white;
+                }
+          }
+        }
+      }
           .basket-icon {
+            position: relative;
+            sup {
+              border-radius: 50%;
+              height: 15px;
+              width: 15px;
+              background: #eb4d4b;
+              color: #fff;
+              font-size: 11px;
+              line-height: 14px;
+              right: -6px;
+              top: -2px;
+              position: absolute;
+              padding: 0px 2px;
+              margin: 0 auto;
+              text-align: center;
+            }
             .basketMenuDiv {
+              // background-color: white;
+              // position: absolute;
+
+              // overflow: hidden;
+              // top: -40px;
+              // left: -130px;
+              // height: 100vh;
+              // width: 0px;
+
+              // transition: 0.9s;
+              // z-index: 5555555;
+
               background-color: white;
               position: absolute;
-
               overflow: hidden;
-              right: 16px;
-              top: -1px;
+              top: -40px;
+              /* left: 264px; */
+              left: -100%;
+              transform: translateX(100%);
               height: 100vh;
               width: 0px;
-
+              width: 385px;
               transition: 0.9s;
               z-index: 5555555;
               &.active {
-                visibility: visible;
-                width: 385px;
+                // visibility: visible;
+                // width: 385px;
+                transform: translateX(-25%);
               }
               .item {
                 height: 430px;
@@ -239,6 +306,7 @@ header {
                   line-height: 18px;
                 }
               }
+
               .header-close {
                 display: flex;
                 align-items: center;
@@ -251,6 +319,7 @@ header {
                   text-transform: uppercase;
                   font-size: 14px;
                   font-weight: 400;
+                  margin: 10px 13px -4px;
                 }
               }
             }
@@ -330,6 +399,7 @@ header {
           }
         }
       }
+      
     }
     .mobile_container {
       background-color: white;
@@ -508,7 +578,129 @@ header {
           }
         }
       }
+      .basketMenuDiv {
+        background-color: white;
+        position: absolute;
+
+        overflow: hidden;
+        right: 0px;
+        top: -1px;
+        height: 100vh;
+        width: 0px;
+
+        transition: 0.9s;
+        z-index: 5555555;
+        &.active {
+          visibility: visible;
+          width: 385px;
+        }
+        .item {
+          height: 430px;
+          overflow-y: auto;
+          li {
+            border-bottom: 1px solid gray;
+            border-top: 1px solid gray;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            .image {
+              width: 100px;
+              height: 100px;
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+              }
+            }
+            .info {
+              padding-left: 15px;
+              color: black;
+              h6 {
+                color: black;
+                font-weight: 400;
+              }
+              span {
+                color: black;
+                font-weight: 500;
+              }
+            }
+            .xbtn {
+              margin-left: 110px;
+              color: red;
+            }
+          }
+        }
+        .totalprices {
+          .total {
+            .table {
+              margin: 0px -29px 23px;
+              strong {
+                font-weight: 500;
+                color: #232323;
+                font-size: 15px;
+                line-height: 22px;
+              }
+              .text-right {
+                white-space: normal;
+                color: #232323;
+                font-weight: 700;
+              }
+            }
+          }
+        }
+        .cart-btn {
+          .btn-default {
+            width: 46%;
+            padding: 10px 20px;
+            font-size: 14px;
+            background-color: #eb4d4b;
+            border-color: #eb4d4b;
+            color: #fff;
+            outline: none;
+            font-size: 14px;
+            line-height: 18px;
+            font-weight: 400;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            border-radius: 0;
+            transition: all 0.5s;
+          }
+          .btn-primary {
+            width: 46%;
+            padding: 10px 20px;
+            font-size: 14px;
+            opacity: 1;
+            font-size: 14px;
+            font-weight: 400;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            border-radius: 0;
+            transition: all 0.5s;
+            color: #fff;
+            background-color: #232323;
+            border: 1px solid #232323;
+            outline: none;
+            line-height: 18px;
+          }
+        }
+
+        .header-close {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 5px 0 15px;
+          border-bottom: 1px solid #eee;
+          margin-bottom: 5px;
+          span {
+            color: #232323;
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: 400;
+            margin: 10px 13px -4px;
+          }
+        }
+      }
     }
+   
   }
   @media screen and (min-width: 391px) and (max-width: 821px) {
     .header-top {
@@ -533,7 +725,6 @@ header {
     }
   }
 }
-
 
 .htc-image-container {
   margin-bottom: 30px;

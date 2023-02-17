@@ -8,6 +8,12 @@ header .header-top {
   align-items: center;
   margin-top: 25px;
 }
+header .header-top.active {
+  position: fixed;
+  top: -25px;
+  color: black;
+  background-color: whitesmoke;
+}
 header .header-top .head_container .row nav .navbar-list {
   display: flex;
   justify-content: space-evenly;
@@ -131,6 +137,28 @@ header .header-top .head_container .row .icons {
   display: flex;
   justify-content: flex-end;
   margin-right: 83px;
+  top: 44px;
+}
+header .header-top .head_container .row .icons .search-icon .searchDiv {
+  visibility: hidden;
+  overflow: hidden;
+  position: absolute;
+  right: 260px;
+  opacity: 0;
+}
+header .header-top .head_container .row .icons .search-icon .searchDiv.active {
+  visibility: visible;
+  transition: 1s all;
+  opacity: 1;
+}
+header .header-top .head_container .row .icons .search-icon .searchDiv .search-input {
+  position: relative;
+}
+header .header-top .head_container .row .icons .search-icon .searchDiv .search-input input {
+  position: relative;
+  width: 317px;
+  height: 40px;
+  border: 1px solid white;
 }
 header .header-top .head_container .row .icons .basket-icon {
   position: relative;

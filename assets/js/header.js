@@ -1,4 +1,3 @@
-
 let drone = document.querySelector(".Drone");
 let dronediv = document.querySelector(".dronediv");
 let accesories = document.querySelector(".accesories");
@@ -11,7 +10,7 @@ let hamburgermenuDiv = document.querySelector(".hamburgerMenuDiv");
 let closeButton = document.getElementById("closebutton");
 let personMenu = document.getElementById("personMenu");
 let personDiv = document.querySelector(".personDiv");
-let searchMenu = document.getElementById("searchMenu");
+let searchMenu = document.querySelector(".search-icon");
 let searchDiv = document.querySelector(".searchDiv");
 
 drone.addEventListener("mouseover", function () {
@@ -23,23 +22,23 @@ drone.addEventListener("mouseout", function () {
   dronediv.classList.remove("active");
 });
 
-basketss.forEach((basketz)=>{
-    basketz.addEventListener("click", function () {
-        basketMenu.forEach(menu=>{
-            menu.classList.add("active");
-        })
-      });
-})
+basketss.forEach((basketz) => {
+  basketz.addEventListener("click", function () {
+    basketMenu.forEach((menu) => {
+      menu.classList.add("active");
+    });
+  });
+});
 
-closeBasketButton.forEach(btn=>{
-    btn.addEventListener("click", function (e) {
-        e.stopPropagation();
-        basketMenu.forEach(menu=>{
-          menu.classList.remove("active");
-      })
-        document.body.style.overflowY ="scroll";
-      });
-})
+closeBasketButton.forEach((btn) => {
+  btn.addEventListener("click", function (e) {
+    e.stopPropagation();
+    basketMenu.forEach((menu) => {
+      menu.classList.remove("active");
+    });
+    document.body.style.overflowY = "scroll";
+  });
+});
 
 accesories.addEventListener("mouseover", function () {
   accesoriesdiv.classList.add("active");
@@ -61,4 +60,19 @@ personMenu.addEventListener("click", function () {
 });
 searchMenu.addEventListener("click", function () {
   searchDiv.classList.toggle("active");
+});
+
+// window.addEventListener("scroll", function () {
+//   const headerTop = this.document.querySelector(".head_container");
+//   headerTop.classList.toggle("active", window.scrollY > 0);
+// });
+
+$(window).scroll(function () {
+  let topHeader = $(".header-top");
+  scroll = $(window).scrollTop();
+  if (scroll >= 66) {
+    topHeader.addClass("active");
+  } else {
+    topHeader.removeClass("active");
+  }
 });

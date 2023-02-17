@@ -9,9 +9,16 @@ header {
     display: flex;
     align-items: center;
     margin-top: 25px;
+    &.active{
+      position: fixed;
+      top: -25px;
+      color: black;
+      background-color: whitesmoke;   
+    }
     .head_container {
       .row {
         nav {
+          
           .navbar-list {
             display: flex;
             justify-content: space-evenly;
@@ -97,6 +104,7 @@ header {
                   a {
                     text-decoration: none;
                     color: #666;
+                    
                   }
                   .line {
                     width: 97px;
@@ -125,9 +133,12 @@ header {
                 text-decoration: none;
                 color: #fff;
                 list-style: none;
+                
+                
                 &:hover {
                   color: black;
                 }
+                
               }
             }
           }
@@ -137,6 +148,31 @@ header {
           display: flex;
           justify-content: flex-end;
           margin-right: 83px;
+          top: 44px;
+          .search-icon{
+            .searchDiv {
+              visibility: hidden;
+              overflow: hidden;
+              position: absolute;
+              right: 260px;
+              // transition: 2s all;
+              opacity: 0;
+              &.active {
+                visibility: visible;
+                transition: 1s all;
+                opacity: 1;
+              }
+              .search-input {
+                position: relative;
+                input {
+                  position: relative;
+                  width: 317px;
+                  height: 40px;
+                  border: 1px solid white;
+                }
+          }
+        }
+      }
           .basket-icon {
             position: relative;
             sup {
@@ -365,6 +401,7 @@ header {
           }
         }
       }
+      
     }
     .mobile_container {
       background-color: white;
@@ -665,6 +702,7 @@ header {
         }
       }
     }
+   
   }
   @media screen and (min-width: 391px) and (max-width: 821px) {
     .header-top {
@@ -2166,3 +2204,5 @@ footer {
   }
 }
 //FOOTER END
+
+  

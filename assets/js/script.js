@@ -23,6 +23,7 @@ $('.stop').on('click',function(){
 })
 
 
+
 //#region CUSTOMER-REVIEW SECTION START
 $("#customer-review .owl-carousel").owlCarousel({
   stagePadding: 50,

@@ -9,6 +9,12 @@ header .header-top {
   align-items: center;
   margin-top: 25px;
 }
+header .header-top.active {
+  position: fixed;
+  top: -25px;
+  color: black;
+  background-color: whitesmoke;
+}
 header .header-top .head_container .row nav .navbar-list {
   display: flex;
   justify-content: space-evenly;
@@ -132,6 +138,24 @@ header .header-top .head_container .row .icons {
   display: flex;
   justify-content: flex-end;
   margin-right: 83px;
+}
+header .header-top .head_container .row .icons .search-icon .searchDiv {
+  visibility: hidden;
+  overflow: hidden;
+  position: absolute;
+  top: 48px;
+}
+header .header-top .head_container .row .icons .search-icon .searchDiv.active {
+  visibility: visible;
+}
+header .header-top .head_container .row .icons .search-icon .searchDiv .search-input {
+  position: relative;
+}
+header .header-top .head_container .row .icons .search-icon .searchDiv .search-input input {
+  position: relative;
+  width: 255px;
+  height: 40px;
+  border: 1px solid white;
 }
 header .header-top .head_container .row .icons .basket-icon {
   position: relative;
@@ -844,11 +868,14 @@ header .header-top .mobile_container .basketMenuDiv .header-close span {
   background-color: #fbfbfb;
 }
 #services .service .image {
-  display: flex;
-  justify-content: center;
+  margin-left: 127px;
+  width: 60px;
+  height: 60px;
 }
 #services .service .image img {
   transition: 0.6s;
+  width: 100%;
+  height: 100%;
 }
 #services .service .image:hover img {
   transform: rotateY(360deg);
@@ -924,18 +951,25 @@ header .header-top .mobile_container .basketMenuDiv .header-close span {
   top: 8px;
   left: 0;
 }
-#story .image img {
+@media screen and (max-width: 391px) {
+  #story ul {
+    display: block;
+  }
+}
+
+.image img {
   width: 100%;
   height: 100%;
 }
-#story .storytitle .subtitle {
+
+.storytitle .subtitle {
   font-size: 16px;
   letter-spacing: 8px;
   font-weight: 500;
   margin-bottom: 12px;
   color: #eb4d4b;
 }
-#story .storytitle .hometitle .home-title {
+.storytitle .hometitle .home-title {
   font-size: 40px;
   line-height: 40px;
   letter-spacing: 0;
@@ -946,7 +980,7 @@ header .header-top .mobile_container .basketMenuDiv .header-close span {
   margin-bottom: 25px;
   padding-bottom: 25px;
 }
-#story .storytitle .hometitle .home-title::before {
+.storytitle .hometitle .home-title::before {
   position: absolute;
   content: "";
   width: 80px;
@@ -954,13 +988,20 @@ header .header-top .mobile_container .basketMenuDiv .header-close span {
   background: #eb4d4b;
   bottom: 0;
 }
-#story .storytitle .story-list {
+@media screen and (max-width: 391px) {
+  .storytitle .hometitle .home-title {
+    font-size: 24px;
+    line-height: 10px;
+    margin-left: 78px;
+  }
+}
+.storytitle .story-list {
   margin-left: -30px;
 }
-#story .storytitle .text {
+.storytitle .text {
   width: 68%;
 }
-#story .storytitle .text p {
+.storytitle .text p {
   margin-bottom: 25px;
   font-size: 14px;
   font-weight: 400;
@@ -968,10 +1009,20 @@ header .header-top .mobile_container .basketMenuDiv .header-close span {
   letter-spacing: 0.5px;
   line-height: 24px;
 }
-#story .storytitle ::marker {
+@media screen and (max-width: 391px) {
+  .storytitle .text {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 391px) {
+  .storytitle .text {
+    width: 90%;
+  }
+}
+.storytitle ::marker {
   color: red;
 }
-#story .storytitle .view-more-btn {
+.storytitle .view-more-btn {
   padding: 8px 25px;
   background: #eb4d4b;
   color: #fff;
@@ -983,9 +1034,14 @@ header .header-top .mobile_container .basketMenuDiv .header-close span {
   margin-left: 32px;
   text-transform: uppercase;
 }
-#story .storytitle .view-more-btn:hover {
+.storytitle .view-more-btn:hover {
   background-color: black;
   border: 1px solid black;
+}
+@media screen and (max-width: 391px) {
+  .storytitle .view-more-btn {
+    margin-left: 0;
+  }
 }
 
 @media screen and (max-width: 391px) {
@@ -993,7 +1049,10 @@ header .header-top .mobile_container .basketMenuDiv .header-close span {
     padding-top: 10PX;
   }
   #story .storytitle .subtitle {
-    font-size: 12px;
+    font-size: 13px;
+    margin-bottom: 8px;
+    letter-spacing: 3px;
+    text-align: center;
   }
 }
 #customer-review {
@@ -1062,16 +1121,6 @@ header .header-top .mobile_container .basketMenuDiv .header-close span {
 #customer-review .owl-carousel .owl-nav span:hover {
   border-color: #232323;
   background: #232323;
-}
-@media screen and (max-width: 391px) {
-  #customer-review .owl-carousel {
-    margin-left: 0px;
-    width: 500px;
-  }
-  #customer-review .owl-carousel .owl-stage-outer {
-    width: 100%;
-    height: 300px;
-  }
 }
 #customer-review .customer {
   width: 100%;
@@ -1219,12 +1268,12 @@ header .header-top .mobile_container .basketMenuDiv .header-close span {
   color: #232323;
 }
 #All-Products .drone {
-  margin-bottom: 110px;
+  margin-bottom: 60px;
   height: 400px;
   position: relative;
 }
 #All-Products .drone .image {
-  height: 100%;
+  height: 93%;
   position: relative;
   cursor: pointer;
 }
@@ -1290,8 +1339,6 @@ header .header-top .mobile_container .basketMenuDiv .header-close span {
 }
 #All-Products .product-information {
   padding: 10px;
-  position: relative;
-  bottom: 47px;
 }
 #All-Products .product-information .hover-button-addcart {
   color: white;
@@ -1302,7 +1349,7 @@ header .header-top .mobile_container .basketMenuDiv .header-close span {
   position: absolute;
   left: 50%;
   transform: translate(-50%);
-  bottom: 2px;
+  bottom: -38px;
   transition: 0.5s all;
   overflow: hidden;
   opacity: 0;
@@ -1973,10 +2020,18 @@ body {
 }
 body header .header-top {
   z-index: 5;
+  color: black;
   width: 100vw;
   height: 65px;
   display: flex;
   align-items: center;
+  margin-top: 25px;
+}
+body header .header-top.active {
+  position: fixed;
+  top: -25px;
+  color: black;
+  background-color: whitesmoke;
 }
 body header .header-top .head_container .row nav .navbar-list {
   display: flex;
@@ -2091,30 +2146,51 @@ body header .header-top .head_container .row nav .navbar-list li .accesoriesdiv 
 }
 body header .header-top .head_container .row nav .navbar-list li a {
   text-decoration: none;
-  color: #fff;
+  color: black;
   list-style: none;
 }
 body header .header-top .head_container .row nav .navbar-list li a:hover {
-  color: black;
+  color: #eb4d4b;
 }
 body header .header-top .head_container .row .icons {
   display: flex;
   justify-content: flex-end;
+  margin-right: 83px;
+}
+body header .header-top .head_container .row .icons .basket-icon {
+  position: relative;
+}
+body header .header-top .head_container .row .icons .basket-icon sup {
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  background: #eb4d4b;
+  color: #fff;
+  font-size: 11px;
+  line-height: 14px;
+  right: -6px;
+  top: -2px;
+  position: absolute;
+  padding: 0px 2px;
+  margin: 0 auto;
+  text-align: center;
 }
 body header .header-top .head_container .row .icons .basket-icon .basketMenuDiv {
   background-color: white;
   position: absolute;
   overflow: hidden;
-  right: 16px;
-  top: -1px;
+  top: -40px;
+  /* left: 264px; */
+  left: -100%;
+  transform: translateX(100%);
   height: 100vh;
   width: 0px;
+  width: 385px;
   transition: 0.9s;
   z-index: 5555555;
 }
 body header .header-top .head_container .row .icons .basket-icon .basketMenuDiv.active {
-  visibility: visible;
-  width: 385px;
+  transform: translateX(-25%);
 }
 body header .header-top .head_container .row .icons .basket-icon .basketMenuDiv .item {
   height: 430px;
@@ -2212,6 +2288,7 @@ body header .header-top .head_container .row .icons .basket-icon .basketMenuDiv 
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 400;
+  margin: 10px 13px -4px;
 }
 body header .header-top .head_container .row .icons .person-icon .personDiv {
   transition: all 0.5s;
@@ -2452,6 +2529,119 @@ body header .header-top .mobile_container .row .person-basket-icons .personDiv .
   body header .header-top .mobile_container .row .person-basket-icons {
     margin-left: 43px;
   }
+}
+body header .header-top .mobile_container .basketMenuDiv {
+  background-color: white;
+  position: absolute;
+  overflow: hidden;
+  right: 0px;
+  top: -1px;
+  height: 100vh;
+  width: 0px;
+  transition: 0.9s;
+  z-index: 5555555;
+}
+body header .header-top .mobile_container .basketMenuDiv.active {
+  visibility: visible;
+  width: 385px;
+}
+body header .header-top .mobile_container .basketMenuDiv .item {
+  height: 430px;
+  overflow-y: auto;
+}
+body header .header-top .mobile_container .basketMenuDiv .item li {
+  border-bottom: 1px solid gray;
+  border-top: 1px solid gray;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+body header .header-top .mobile_container .basketMenuDiv .item li .image {
+  width: 100px;
+  height: 100px;
+}
+body header .header-top .mobile_container .basketMenuDiv .item li .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+body header .header-top .mobile_container .basketMenuDiv .item li .info {
+  padding-left: 15px;
+  color: black;
+}
+body header .header-top .mobile_container .basketMenuDiv .item li .info h6 {
+  color: black;
+  font-weight: 400;
+}
+body header .header-top .mobile_container .basketMenuDiv .item li .info span {
+  color: black;
+  font-weight: 500;
+}
+body header .header-top .mobile_container .basketMenuDiv .item li .xbtn {
+  margin-left: 110px;
+  color: red;
+}
+body header .header-top .mobile_container .basketMenuDiv .totalprices .total .table {
+  margin: 0px -29px 23px;
+}
+body header .header-top .mobile_container .basketMenuDiv .totalprices .total .table strong {
+  font-weight: 500;
+  color: #232323;
+  font-size: 15px;
+  line-height: 22px;
+}
+body header .header-top .mobile_container .basketMenuDiv .totalprices .total .table .text-right {
+  white-space: normal;
+  color: #232323;
+  font-weight: 700;
+}
+body header .header-top .mobile_container .basketMenuDiv .cart-btn .btn-default {
+  width: 46%;
+  padding: 10px 20px;
+  font-size: 14px;
+  background-color: #eb4d4b;
+  border-color: #eb4d4b;
+  color: #fff;
+  outline: none;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border-radius: 0;
+  transition: all 0.5s;
+}
+body header .header-top .mobile_container .basketMenuDiv .cart-btn .btn-primary {
+  width: 46%;
+  padding: 10px 20px;
+  font-size: 14px;
+  opacity: 1;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border-radius: 0;
+  transition: all 0.5s;
+  color: #fff;
+  background-color: #232323;
+  border: 1px solid #232323;
+  outline: none;
+  line-height: 18px;
+}
+body header .header-top .mobile_container .basketMenuDiv .header-close {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 0 15px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 5px;
+}
+body header .header-top .mobile_container .basketMenuDiv .header-close span {
+  color: #232323;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 10px 13px -4px;
 }
 @media screen and (min-width: 391px) and (max-width: 821px) {
   body header .header-top {
@@ -2877,35 +3067,17 @@ body #Product .product-right .features li a {
     margin-left: -22px;
   }
 }
-body #Related {
-  margin-top: 55px;
-}
-body #Related .subtitle {
-  text-align: center;
-  font-size: 16px;
-  letter-spacing: 8px;
-  font-weight: 500;
+body #htc_product .title .subtitle {
+  font-size: 26px;
   margin: 0;
   margin-bottom: 12px;
-  font-family: "Poppins", sans-serif;
   color: #eb4d4b;
 }
-body #Related .homtitle {
-  font-size: 40px;
-  line-height: 40px;
-  letter-spacing: 0;
-  font-weight: 600;
-  color: #232323;
-  font-family: "Poppins", sans-serif;
-  text-transform: unset;
+body #htc_product .title .home {
+  font-size: 34px;
   position: relative;
-  display: inline-block;
-  margin: 0;
-  margin-bottom: 25px;
-  padding-bottom: 25px;
-  text-align: center;
 }
-body #Related .homtitle::before {
+body #htc_product .title .home .home_title:before {
   position: absolute;
   content: "";
   width: 80px;
@@ -2916,81 +3088,58 @@ body #Related .homtitle::before {
   right: 0;
   text-align: center;
   margin: 0 auto;
+  margin-top: 20px;
 }
-body #Related .product-slide-show .left_arrow {
-  position: absolute;
-  bottom: 94px;
-  left: 47%;
-  background-color: #eb4d4b;
-  padding: 9px 12px;
-  color: white;
-  border-radius: 64px;
-}
-body #Related .product-slide-show .left_arrow:hover {
-  transition: all 0.7s;
-  background-color: #232323;
-}
-body #Related .product-slide-show .right_arrow {
-  position: absolute;
-  bottom: 94px;
-  left: 50%;
-  background-color: #eb4d4b;
-  padding: 9px 12px;
-  color: white;
-  border-radius: 64px;
-}
-body #Related .product-slide-show .right_arrow:hover {
-  transition: all 0.7s;
-  background-color: #232323;
-}
-body #Related .product-slide-show .product {
+body #htc_product .item .device {
   margin-bottom: 110px;
-  height: 400px;
-  position: relative;
-  margin-right: 322px;
-}
-body #Related .product-slide-show .product .image {
+  width: 241px;
+  height: 241px;
+  padding: 11px;
   position: relative;
 }
-body #Related .product-slide-show .product .image img {
-  width: 295px;
-  height: 295px;
-}
-body #Related .product-slide-show .product .image .first {
-  position: absolute;
-  opacity: 1;
-  transition: 1s all;
-}
-body #Related .product-slide-show .product .image .second {
-  position: absolute;
-  opacity: 0;
-  transition: 1s all;
-}
-body #Related .product-slide-show .product .image:hover {
+body #htc_product .item .device .image {
+  height: 100%;
+  position: relative;
   cursor: pointer;
 }
-body #Related .product-slide-show .product .image:hover .first {
+body #htc_product .item .device .image img {
+  width: 100%;
+  height: 100%;
+}
+body #htc_product .item .device .image .first {
+  position: absolute;
+  opacity: 1;
+  transition: 1s all;
+}
+body #htc_product .item .device .image .second {
+  position: absolute;
+  opacity: 0;
+  transition: 1s all;
+}
+body #htc_product .item .device .image:hover .first {
   opacity: 0;
 }
-body #Related .product-slide-show .product .image:hover .second {
+body #htc_product .item .device .image:hover .second {
   opacity: 1;
+  transform: rotateY(180deg);
 }
-body #Related .product-slide-show .product .rating {
+body #htc_product .item .device .rating {
   position: absolute;
-  color: rgb(230, 255, 5);
-  bottom: 120px;
-  left: 158px;
+  bottom: 40px;
+  left: 50%;
   transform: translateX(-50%);
-  display: flex;
 }
-body #Related .product-slide-show .product .hover-buttons-right {
+body #htc_product .item .device .rating .yellow {
+  color: yellow;
+}
+body #htc_product .item .device .buttons {
   position: absolute;
   left: auto;
   right: 16px;
   top: 10px;
   display: block;
 }
-body #Related .product-slide-show .product .hover-buttons-right .rightbuttons {
+body #htc_product .item .device .buttons .allbutton {
   border: 1px solid black;
   padding: 6px;
   border-radius: 50%;
@@ -3002,113 +3151,77 @@ body #Related .product-slide-show .product .hover-buttons-right .rightbuttons {
   transition: 0.5s all;
   cursor: pointer;
 }
-body #Related .product-slide-show .product .rightbuttons.active {
+body #htc_product .item .device .buttons .allbutton:hover {
+  background-color: #eb4d4b;
+}
+body #htc_product .item .device .allbutton.active {
   opacity: 1;
 }
-body #Related .product-slide-show .product-info {
-  padding: 10px;
-  position: absolute;
-  top: 70%;
-}
-body #Related .product-slide-show .product-info .hover-button-addcart button {
-  position: relative;
-  left: 66px;
-  bottom: 31px;
-  border: none;
-  color: #fff;
-  border-radius: 0;
+body #htc_product .item .device .add_cart {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #eb4d4b;
-  padding: 10px 21px;
-  transition: all 0.9s;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: -62px;
+  transition: 0.5s all;
+  overflow: hidden;
+  opacity: 0;
+  height: 0;
+  width: 120px;
   cursor: pointer;
 }
-body #Related .product-slide-show .product-info .hover-button-addcart button:hover {
-  background-color: #232323;
-}
-body #Related .product-slide-show .product-info .hover-button-addcart button span {
-  font-size: 13px;
-  font-weight: 400;
-  letter-spacing: 0.5px;
-  line-height: 13px;
-  text-transform: uppercase;
-}
-body #Related .product-slide-show .product-info .hover-button-addcart button .hover-button-addcart.active {
+body #htc_product .item .device .add_cart.active {
+  height: 34px;
   opacity: 1;
 }
-body #Related .product-slide-show .product-info h4 {
-  overflow: hidden;
-  margin: 0;
-  margin-bottom: 10px;
+body #htc_product .owl-carousel .owl-nav button.owl-next {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #eb4d4b;
+  color: white;
+  border: none;
+  padding: 0 !important;
+  font-size: 26px;
+  font-weight: 700;
 }
-body #Related .product-slide-show .product-info h4 a {
-  margin-bottom: 10px;
-  text-decoration: none;
-  color: #232323;
-  white-space: nowrap;
-  font-size: 16px;
-  font-weight: 600;
-  letter-spacing: 0.45px;
-  line-height: 20px;
-  margin-left: 85px;
+body #htc_product .owl-carousel .owl-nav button.owl-prev {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #eb4d4b;
+  color: white;
+  border: none;
+  padding: 0 !important;
+  font-size: 26px;
+  font-weight: 700;
 }
-body #Related .product-slide-show .product-info .price {
-  color: #eb4d4b;
-  font-size: 16px;
-  margin-bottom: 5px;
-  font-weight: 500;
-  transition: all 0.4s;
-  opacity: 1;
-  margin-left: 70px;
-  display: flex;
-}
-body #Related .product-slide-show .product-info .price .price-old {
-  color: #888;
-  margin-left: 8px;
-}
-@media only screen and (max-width: 391px) {
-  body #Related .product img {
-    width: 20px;
-    height: 20px;
-  }
-}
-
-@media only screen and (max-width: 391px) {
-  #Related {
-    margin-top: -25px;
-  }
-  #Related .subtitle {
-    font-size: 14px;
-    letter-spacing: 2px;
-    margin-bottom: 8px;
-  }
-  #Related .homtitle {
-    font-size: 22px;
-    letter-spacing: 2px;
-    line-height: 26px;
-  }
-}
-footer {
+body footer {
   padding: 65px 0 0 0;
 }
-footer .container .row .contact {
+body footer .container .row .contact {
   padding: 40px 20px;
   border: 1px solid rgba(102, 102, 102, 0.15);
   text-align: center;
 }
-footer .container .row .contact span {
+body footer .container .row .contact span {
   font-weight: 500;
   font-size: 16px;
   color: #eb4d4b;
   letter-spacing: 6px;
   font-family: "Poppins", sans-serif;
 }
-footer .container .row .contact h2 {
+body footer .container .row .contact h2 {
   font-size: 42px;
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   color: #000;
 }
-footer .container .row .contact p {
+body footer .container .row .contact p {
   margin-bottom: 28px;
   width: 80px;
   height: 4px;
@@ -3117,40 +3230,40 @@ footer .container .row .contact p {
   display: inline-block;
   font-family: "Poppins", sans-serif;
 }
-footer .container .row .contact form input {
+body footer .container .row .contact form input {
   display: inline-block;
   width: 46%;
   height: 45px;
   border-radius: 15px;
   border: none;
 }
-footer .container .row .contact form input::-moz-placeholder {
+body footer .container .row .contact form input::-moz-placeholder {
   padding: 10px 16px;
   font-family: "Poppins", sans-serif;
 }
-footer .container .row .contact form input::placeholder {
+body footer .container .row .contact form input::placeholder {
   padding: 10px 16px;
   font-family: "Poppins", sans-serif;
 }
-footer .container .row .contact form .emailinp {
+body footer .container .row .contact form .emailinp {
   margin-left: 32px;
 }
-footer .container .row .contact form textarea {
+body footer .container .row .contact form textarea {
   margin-top: 20px;
   border: none;
   width: 100%;
   border-radius: 15px;
   height: 140px;
 }
-footer .container .row .contact form textarea::-moz-placeholder {
+body footer .container .row .contact form textarea::-moz-placeholder {
   padding: 10px 16px;
   font-family: "Poppins", sans-serif;
 }
-footer .container .row .contact form textarea::placeholder {
+body footer .container .row .contact form textarea::placeholder {
   padding: 10px 16px;
   font-family: "Poppins", sans-serif;
 }
-footer .container .row .contact form .button {
+body footer .container .row .contact form .button {
   width: 24%;
   margin: 15px 0 0 0;
   border: none;
@@ -3163,29 +3276,29 @@ footer .container .row .contact form .button {
   font-family: "Poppins", sans-serif;
   transition: 0.5s;
 }
-footer .container .row .contact form .button:hover {
+body footer .container .row .contact form .button:hover {
   background-color: black;
 }
-footer .container .row .newsletter {
+body footer .container .row .newsletter {
   padding: 30px 10px 30px;
   border: 1px solid rgba(102, 102, 102, 0.15);
   text-align: center;
   height: 471px;
 }
-footer .container .row .newsletter .join span {
+body footer .container .row .newsletter .join span {
   font-weight: 500;
   font-size: 16px;
   color: #eb4d4b;
   letter-spacing: 6px;
   font-family: "Poppins", sans-serif;
 }
-footer .container .row .newsletter .join h2 {
+body footer .container .row .newsletter .join h2 {
   font-size: 42px;
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   color: #000;
 }
-footer .container .row .newsletter .join p {
+body footer .container .row .newsletter .join p {
   margin-top: 10px;
   margin-bottom: 20px;
   width: 80px;
@@ -3195,42 +3308,42 @@ footer .container .row .newsletter .join p {
   display: inline-block;
   font-family: "Poppins", sans-serif;
 }
-footer .container .row .newsletter .icon-letter {
+body footer .container .row .newsletter .icon-letter {
   line-height: 30px;
 }
-footer .container .row .newsletter .icon-letter i {
+body footer .container .row .newsletter .icon-letter i {
   font-size: 50px;
   color: #eb4d4b;
 }
-footer .container .row .newsletter .icon-letter h2 {
+body footer .container .row .newsletter .icon-letter h2 {
   margin-top: 10px;
   font-size: 22px;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
   color: #000;
 }
-footer .container .row .newsletter .icon-letter p {
+body footer .container .row .newsletter .icon-letter p {
   font-size: 16px;
   color: #666;
   font-weight: 400;
   font-family: "Poppins", sans-serif;
 }
-footer .container .row .newsletter .inp {
+body footer .container .row .newsletter .inp {
   position: relative;
 }
-footer .container .row .newsletter .inp input {
+body footer .container .row .newsletter .inp input {
   height: 50px;
   border-radius: 30px;
   border: 1px solid #e5e5e5;
   width: 80%;
 }
-footer .container .row .newsletter .inp input::-moz-placeholder {
+body footer .container .row .newsletter .inp input::-moz-placeholder {
   padding: 10px;
 }
-footer .container .row .newsletter .inp input::placeholder {
+body footer .container .row .newsletter .inp input::placeholder {
   padding: 10px;
 }
-footer .container .row .newsletter .inp .button {
+body footer .container .row .newsletter .inp .button {
   position: absolute;
   right: 66px;
   top: 4px;
@@ -3240,67 +3353,67 @@ footer .container .row .newsletter .inp .button {
   height: 42px;
   color: white;
 }
-footer .container .row .newsletter .contact-icons {
+body footer .container .row .newsletter .contact-icons {
   margin-right: 77px;
 }
-footer .container .row .newsletter .contact-icons ul {
+body footer .container .row .newsletter .contact-icons ul {
   margin-top: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-footer .container .row .newsletter .contact-icons ul li {
+body footer .container .row .newsletter .contact-icons ul li {
   margin-left: 10px;
   list-style-type: none;
   width: 34px;
   height: 34px;
   border-radius: 50%;
 }
-footer .container .row .newsletter .contact-icons ul li a {
+body footer .container .row .newsletter .contact-icons ul li a {
   text-decoration: none;
 }
-footer .container .row .newsletter .contact-icons ul li a i {
+body footer .container .row .newsletter .contact-icons ul li a i {
   font-size: 15spx;
   padding: 10px;
   color: white;
 }
-footer .container .row .newsletter .contact-icons ul .facebook {
+body footer .container .row .newsletter .contact-icons ul .facebook {
   background-color: #3b5999;
 }
-footer .container .row .newsletter .contact-icons ul .twitter {
+body footer .container .row .newsletter .contact-icons ul .twitter {
   background-color: #00aced;
 }
-footer .container .row .newsletter .contact-icons ul .youTube {
+body footer .container .row .newsletter .contact-icons ul .youTube {
   background-color: #d12121;
 }
-footer .container .row .newsletter .contact-icons ul .google {
+body footer .container .row .newsletter .contact-icons ul .google {
   background-color: #dc473b;
 }
-footer .container .row .newsletter .contact-icons ul .pintrst {
+body footer .container .row .newsletter .contact-icons ul .pintrst {
   background-color: #cb2027;
 }
-footer .container .row .newsletter .contact-icons ul .instagram {
+body footer .container .row .newsletter .contact-icons ul .instagram {
   background-color: #cc2366;
 }
 @media only screen and (max-width: 391px) {
-  footer .container .row .contact {
+  body footer .container .row .contact {
     padding: 40px 20px;
     border: 1px solid rgba(102, 102, 102, 0.15);
     text-align: center;
   }
-  footer .container .row .contact span {
+  body footer .container .row .contact span {
     font-weight: 500;
     font-size: 16px;
     color: #eb4d4b;
     letter-spacing: 6px;
     font-family: "Poppins", sans-serif;
   }
-  footer .container .row .contact h2 {
+  body footer .container .row .contact h2 {
     font-size: 42px;
     font-family: "Poppins", sans-serif;
     font-weight: 700;
   }
-  footer .container .row .contact p {
+  body footer .container .row .contact p {
     margin-bottom: 28px;
     width: 80px;
     height: 4px;
@@ -3309,40 +3422,40 @@ footer .container .row .newsletter .contact-icons ul .instagram {
     display: inline-block;
     font-family: "Poppins", sans-serif;
   }
-  footer .container .row .contact form input {
+  body footer .container .row .contact form input {
     display: inline-block;
     width: 44%;
     height: 45px;
     border-radius: 15px;
     border: none;
   }
-  footer .container .row .contact form input::-moz-placeholder {
+  body footer .container .row .contact form input::-moz-placeholder {
     padding: 10px 8px;
     font-family: "Poppins", sans-serif;
   }
-  footer .container .row .contact form input::placeholder {
+  body footer .container .row .contact form input::placeholder {
     padding: 10px 8px;
     font-family: "Poppins", sans-serif;
   }
-  footer .container .row .contact form .emailinp {
+  body footer .container .row .contact form .emailinp {
     margin-left: 32px;
   }
-  footer .container .row .contact form textarea {
+  body footer .container .row .contact form textarea {
     margin-top: 20px;
     border: none;
     width: 100%;
     border-radius: 15px;
     height: 140px;
   }
-  footer .container .row .contact form textarea::-moz-placeholder {
+  body footer .container .row .contact form textarea::-moz-placeholder {
     padding: 10px 16px;
     font-family: "Poppins", sans-serif;
   }
-  footer .container .row .contact form textarea::placeholder {
+  body footer .container .row .contact form textarea::placeholder {
     padding: 10px 16px;
     font-family: "Poppins", sans-serif;
   }
-  footer .container .row .contact form .button {
+  body footer .container .row .contact form .button {
     width: 41%;
     margin: 15px 0 0 0;
     border: none;
@@ -3355,27 +3468,27 @@ footer .container .row .newsletter .contact-icons ul .instagram {
     font-family: "Poppins", sans-serif;
     transition: 0.5s;
   }
-  footer .container .row .contact form .button:hover {
+  body footer .container .row .contact form .button:hover {
     background-color: black;
   }
-  footer .container .row .newsletter {
+  body footer .container .row .newsletter {
     padding: 30px 10px 30px;
     border: 1px solid rgba(102, 102, 102, 0.15);
     text-align: center;
   }
-  footer .container .row .newsletter .join span {
+  body footer .container .row .newsletter .join span {
     font-weight: 500;
     font-size: 16px;
     color: #eb4d4b;
     letter-spacing: 6px;
     font-family: "Poppins", sans-serif;
   }
-  footer .container .row .newsletter .join h2 {
+  body footer .container .row .newsletter .join h2 {
     font-size: 42px;
     font-family: "Poppins", sans-serif;
     font-weight: 700;
   }
-  footer .container .row .newsletter .join p {
+  body footer .container .row .newsletter .join p {
     margin-top: 10px;
     margin-bottom: 20px;
     width: 80px;
@@ -3385,37 +3498,37 @@ footer .container .row .newsletter .contact-icons ul .instagram {
     display: inline-block;
     font-family: "Poppins", sans-serif;
   }
-  footer .container .row .newsletter .icon-letter {
+  body footer .container .row .newsletter .icon-letter {
     line-height: 30px;
   }
-  footer .container .row .newsletter .icon-letter h2 {
+  body footer .container .row .newsletter .icon-letter h2 {
     margin-top: 10px;
     font-size: 22px;
     font-weight: 600;
     font-family: "Poppins", sans-serif;
   }
-  footer .container .row .newsletter .icon-letter p {
+  body footer .container .row .newsletter .icon-letter p {
     font-size: 16px;
     color: #666;
     font-weight: 400;
     font-family: "Poppins", sans-serif;
   }
-  footer .container .row .newsletter .inp {
+  body footer .container .row .newsletter .inp {
     position: relative;
   }
-  footer .container .row .newsletter .inp input {
+  body footer .container .row .newsletter .inp input {
     height: 50px;
     border-radius: 30px;
     border: 1px solid #e5e5e5;
     width: 80%;
   }
-  footer .container .row .newsletter .inp input::-moz-placeholder {
+  body footer .container .row .newsletter .inp input::-moz-placeholder {
     padding: 10px;
   }
-  footer .container .row .newsletter .inp input::placeholder {
+  body footer .container .row .newsletter .inp input::placeholder {
     padding: 10px;
   }
-  footer .container .row .newsletter .inp .button {
+  body footer .container .row .newsletter .inp .button {
     position: absolute;
     right: 39px;
     top: 4px;
@@ -3426,108 +3539,108 @@ footer .container .row .newsletter .contact-icons ul .instagram {
     color: white;
   }
 }
-footer .container .row .attachment {
+body footer .container .row .attachment {
   padding-bottom: 33px;
   position: relative;
   top: 20px;
   font-size: 15px;
 }
-footer .container .row .attachment .partUp,
-footer .container .row .attachment .partDown {
+body footer .container .row .attachment .partUp,
+body footer .container .row .attachment .partDown {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-footer .container .row .attachment .partUp li,
-footer .container .row .attachment .partDown li {
+body footer .container .row .attachment .partUp li,
+body footer .container .row .attachment .partDown li {
   list-style-type: none;
   margin-right: 20px;
 }
-footer .container .row .attachment .partUp li a,
-footer .container .row .attachment .partDown li a {
+body footer .container .row .attachment .partUp li a,
+body footer .container .row .attachment .partDown li a {
   text-decoration: none;
   color: gray;
   font-family: "Poppins", sans-serif;
 }
-footer .container .row .attachment .partUp .line,
-footer .container .row .attachment .partDown .line {
+body footer .container .row .attachment .partUp .line,
+body footer .container .row .attachment .partDown .line {
   width: 1px;
   height: 15px;
   background-color: gray;
   position: relative;
   right: 10px;
 }
-footer .container .row .accordresponsiv {
+body footer .container .row .accordresponsiv {
   display: none;
 }
-footer .container .row .accordresponsiv .accordion .accordion-item .firstAcc .ac-Body ul {
+body footer .container .row .accordresponsiv .accordion .accordion-item .firstAcc .ac-Body ul {
   padding: 0;
 }
-footer .container .row .accordresponsiv .accordion .accordion-item .firstAcc .ac-Body ul li {
+body footer .container .row .accordresponsiv .accordion .accordion-item .firstAcc .ac-Body ul li {
   list-style-type: none;
 }
-footer .container .row .accordresponsiv .accordion .accordion-item .firstAcc .ac-Body ul li a {
+body footer .container .row .accordresponsiv .accordion .accordion-item .firstAcc .ac-Body ul li a {
   text-decoration: none;
   color: gray;
 }
 @media only screen and (max-width: 820px) {
-  footer .container .row .attachment {
+  body footer .container .row .attachment {
     display: none;
     padding-bottom: 33px;
     position: relative;
     top: 20px;
     font-size: 15px;
   }
-  footer .container .row .attachment .partUp,
-  footer .container .row .attachment .partDown {
+  body footer .container .row .attachment .partUp,
+  body footer .container .row .attachment .partDown {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  footer .container .row .attachment .partUp li,
-  footer .container .row .attachment .partDown li {
+  body footer .container .row .attachment .partUp li,
+  body footer .container .row .attachment .partDown li {
     list-style-type: none;
     margin-right: 20px;
   }
-  footer .container .row .attachment .partUp li a,
-  footer .container .row .attachment .partDown li a {
+  body footer .container .row .attachment .partUp li a,
+  body footer .container .row .attachment .partDown li a {
     text-decoration: none;
     color: gray;
     font-family: "Poppins", sans-serif;
   }
-  footer .container .row .attachment .partUp .line,
-  footer .container .row .attachment .partDown .line {
+  body footer .container .row .attachment .partUp .line,
+  body footer .container .row .attachment .partDown .line {
     width: 1px;
     height: 15px;
     background-color: gray;
     position: relative;
     right: 10px;
   }
-  footer .container .row .accordresponsiv {
+  body footer .container .row .accordresponsiv {
     padding-bottom: 15px;
     display: block;
   }
-  footer .container .row .accordresponsiv .accordion .accordion-item .accordion-header .accordion-button {
+  body footer .container .row .accordresponsiv .accordion .accordion-item .accordion-header .accordion-button {
     background-color: rgb(242, 246, 249);
   }
-  footer .container .row .accordresponsiv .accordion .accordion-item .firstAcc .ac-Body {
+  body footer .container .row .accordresponsiv .accordion .accordion-item .firstAcc .ac-Body {
     background-color: rgb(242, 246, 249);
   }
-  footer .container .row .accordresponsiv .accordion .accordion-item .firstAcc .ac-Body ul {
+  body footer .container .row .accordresponsiv .accordion .accordion-item .firstAcc .ac-Body ul {
     padding: 0;
   }
-  footer .container .row .accordresponsiv .accordion .accordion-item .firstAcc .ac-Body ul li {
+  body footer .container .row .accordresponsiv .accordion .accordion-item .firstAcc .ac-Body ul li {
     list-style-type: none;
   }
-  footer .container .row .accordresponsiv .accordion .accordion-item .firstAcc .ac-Body ul li a {
+  body footer .container .row .accordresponsiv .accordion .accordion-item .firstAcc .ac-Body ul li a {
     text-decoration: none;
     color: gray;
   }
 }
-footer .FooterDown {
+body footer .FooterDown {
   background-color: #151515;
 }
-footer .FooterDown .box {
+body footer .FooterDown .box {
   height: 60px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -3535,15 +3648,15 @@ footer .FooterDown .box {
   justify-content: space-between;
   align-items: center;
 }
-footer .FooterDown .box .text-image p {
+body footer .FooterDown .box .text-image p {
   color: white;
 }
-footer .FooterDown .box .text-image p a {
+body footer .FooterDown .box .text-image p a {
   text-decoration: none;
   color: white;
 }
 @media only screen and (max-width: 391px) {
-  footer .FooterDown .box {
+  body footer .FooterDown .box {
     padding-top: 10px;
     padding-bottom: 10px;
     display: flex;
@@ -3551,10 +3664,10 @@ footer .FooterDown .box .text-image p a {
     align-items: center;
     flex-direction: column;
   }
-  footer .FooterDown .box .text-image p {
+  body footer .FooterDown .box .text-image p {
     color: white;
   }
-  footer .FooterDown .box .text-image p a {
+  body footer .FooterDown .box .text-image p a {
     text-decoration: none;
     color: white;
   }
